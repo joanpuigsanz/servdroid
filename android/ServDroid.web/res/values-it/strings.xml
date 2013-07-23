@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		Copyright (C) 2010 Joan Puig Sanz Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+	-->
+<resources>
+	<string name="app_name">ServDroid.Web</string>
+
+	<string name="text_start">Inizializzare</string>
+
+	<string name="text_starting">Inizializzazione server web...</string>
+
+	<string name="text_stopping">Fermando server web...</string>
+
+	<string name="text_running">In funzionamento</string>
+
+	<string name="text_stopped">Fermo</string>
+
+	<string name="text_port">Porta</string>
+
+	<string name="text_status">Stato:</string>
+
+	<string name="no_visits">Senza visite</string>
+
+	<string name="no_hosts">Senza host</string>
+
+	<string name="server_ip">IP server:</string>
+
+	<string name="table_ip">IP</string>
+
+	<string name="table_path">Percorso</string>
+
+	<string name="table_time">Tempo</string>
+
+	<string name="text_server_info">Informazioni server:</string>
+
+	<string name="text_server_info_no_network">Non sei connesso</string>
+
+	<string name="text_server_info_no_wifi"> Non sei connesso a nessuna rete Wi-Fi</string>
+
+	<string name="menu_preferences">Preferenze</string>
+
+	<string name="menu_log">Mostrare log</string>
+
+	<string name="menu_refresh_log">Aggiornare log</string>
+
+	<string name="menu_open_browser">Aprire browser</string>
+
+	<string name="menu_statics">Statistiche</string>
+
+	<string name="menu_save_log">Salvare in un file</string>
+
+	<string name="menu_help">Aiuto</string>
+
+	<string name="menu_show_more_info">Mostrare più informazioni</string>
+
+	<string name="menu_delete">Cancellare</string>
+
+	<string name="menu_delete_all">Cancellare tutto</string>
+
+	<string name="menu_clear_list">Pulire lista</string>
+
+	<string name="menu_add_black_list">Aggiungere IP alla lista nera</string>
+
+	<string name="menu_add_white_list"> Aggiungere IP alla lista bianca</string>
+
+	<string name="enable">Abilitare</string>
+
+	<string name="disable">Disabilitare</string>
+
+	<string name="enabled">Abilitato</string>
+
+	<string name="disabled">Disabilitato</string>
+
+	<string name="settings_port">Settaggio Porte</string>
+
+	<string name="settings_max_clients">Settagio Massimo Utenti</string>
+
+	<string name="settings_password">Password</string>
+
+	<string name="settings_white_list">Lista bianca</string>
+
+	<string name="settings_black_list">Lista nera</string>
+
+	<string name="settings_www_path">Percorso dei documenti web</string>
+
+	<string name="settings_error_page">Percorso dei documenti degli errori</string>
+
+	<string name="settings_log_path">Percorso dove salvare i log</string>
+
+	<string name="settings_cookies">Alcun cookie?</string>
+
+	<string name="settings_vibrate">Attivare vibrazione</string>
+
+	<string name="settings_reset_settings">Ristabilire preferenze</string>
+
+	<string name="settings_saved">Preferenze salvate</string>
+
+	<string name="accept">Accettare</string>
+
+	<string name="cancel">Cancellare</string>
+
+	<string name="add_host">Aggiungere IP</string>
+
+	<string name="remove_host">Eliminare host</string>
+
+	<string name="remove">Eliminare</string>
+
+	<string name="server_log">Log del server</string>
+
+	<string name="log_saved">I log sono stati salvati in</string>
+
+	<string name="log_not_saved">ERRORE salvando i record</string>
+
+	<string name="error_stopping_process">ERRORE fermando il processo</string>
+
+	<string name="error_starting_process">ERRORE inizializzando il processo</string>
+
+	<string name="saving_log_progress">Salvando i log...</string>
+
+	<string name="no_log_entries">NON sono stati trovati log</string>
+
+	<string name="log_info_1">Mostrando</string>
+
+	<string name="log_info_2">log.</string>
+
+	<string name="press_back_button">Premi di nuovo per uscire e fermare il server
+	</string>
+
+	<string name="info_dialog_1">Metti i documenti HTML nella cartella</string>
+
+	<string name="info_dialog_2">in modo che siano seriviti agli utenti.</string>
+
+	<string name="info_dialog_3">Puoi modificare la root directory tra le preferenze
+		dell’applicazione.</string>
+
+	<string name="info_dialog_4">Puoi anche personalizzare gli altri aspetti
+		dell’applicazione nelle preferenze.</string>
+
+	<string name="info_dialog_5">Ricorda che per effettuare qualsiasi cambiamento è
+		necessario reinizializzare il servizio.</string>
+
+	<string name="information">Informazione</string>
+
+
+
+
+
+
+
+
+
+
+	<string name="title_server_settings">Preferenze del server</string>
+
+	<string name="chose_port">Definire porta</string>
+
+	<string name="server_port">Porta del server</string>
+	<string name="chose_max_clients"> Definire numero massimo di clients</string>
+
+	<string name="server_max_clients">Quanti clients possono accedere allo stesso tempo
+	</string>
+
+	<string name="chose_www_path">Definire percorso dei documenti</string>
+
+	<string name="server_www_path">Percorso dei documenti HTML</string>
+
+	<string name="chose_error_path">Definire percorso dei documenti di errore</string>
+
+	<string name="server_error_path">Dove si trovano i documenti HTML di errore
+		(404.html...)  </string>
+
+	<string name="chose_log_path">Definire il percorso dei record</string>
+
+	<string name="server_log_path">Dove si salvano i record</string>
+
+	<string name="vibrate">Vibrar</string>
+
+	<string name="server_vibrate">Quando riceve una richiesta, vibra</string>
+
+	<string name="title_log_settings">Preferenze dei record</string>
+
+	<string name="show_entries">Input da mostrare</string>
+
+	<string name="log_entries">Quanti input dei record saranno mostrati</string>
+
+	<string name="title_other_settings">Altre preferenze</string>
+
+	<string name="reset_configurations">Reiniziare le preferenze</string>
+
+	<string name="other_reset">Ristabilire le configurazioni</string>
+
+	<string name="reset_configurations_message">Questa opzione ristabilirà le configurazioni di
+		dafault. Sei sicuro?</string>
+
+	<string name="about">Sull’applicazione</string>
+
+	<string name="other_about">Su ServDroid.web</string>
+
+	<!--  V 0.1.3  -->
+	<string name="directory_indexing">Indicizzazione Cartella</string>
+	<string name="server_directory_indexing">Ablita l\'indicizzazione della cartella se non
+		esiste un index.html</string>
+	<string name="directory_indexing_get_template">Ottieni template per l\'indicizzazione cartella
+	</string>
+	<string name="server_directory_indexing_get_template">Scarica ed installa un template per l\'indicizzazione della cartella</string>
+	<string name="directory_indexing_question">Sei sicuro di voler scaricare ed intallare un template per l\'indicizzazione della cartella? (raccomandato) \n\n	Sovrascriverà i file esistenti.</string>
+		<string name="installing_template">Installo template</string>
+	<string name="connecting">Connetto...</string>
+	<string name="downloading">Scarico...</string>
+	<string name="extracting">Estraggo...</string>
+	<string name="finish_downloading_extracting">Template scaricato ed installato</string>
+	<string name="error_finish_downloading_extracting">Errore scaricando il template, prova manualmente
+		dalla pagina web di ServDroid
+		([[param]]).\n\nVai alla pagina di download?
+	</string>
+	<string name="error">Errore</string>
+	<string name="web_page">Pagina Web</string>
+	<string name="info_dialog_6">Per personalizzare l\'indicizzazione della cartella e la pagina d\'errore, crea un \"default_style.css\" nel percorso della tua cartella www e crea la cartella \"icons\" contenente questi file: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
+	<string name="info_dialog_7">Puoi trovare un template su [[param]]</string>
+	<string name="release_notes">Note di Rilascio</string>
+	<string name="donate">Dona</string>
+<!-- 0.1.5 -->
+  	<string name="settings_time_expires_cache">Expiration cache</string>
+  	<string name="server_expiration_cache">Dopo quanti minuti una pagina scadrá nel browser cache</string>
+  
+ <!--  0.2 -->
+  <string name="settings_autostart">Autostart</string>
+  <string name="settings_autostart_on_wifi_on">Avvia il server quando la connessione wifi é accesa</string>
+  <string name="settings_autostop_on_wifi_off">Ferma il server quando la connessione WiFi è disattiva</string>
+  <string name="settings_autostop_on_wifi_off_text">Ferma automaticamente il server quando il dispositivo non è connesso a una rete WiFi</string>
+  <string name="settings_autostart_on_boot">Avvia all\'accenzione</string>
+  <string name="settings_autostart_on_boot_text">Il server si avvierà automaticamente quando il telefono è acceso.</string>
+  <string name="settings_show_notification">Notifica</string>
+  <string name="settings_show_notification_text">Mostra una notifica all\'avvio del server</string>
+  <string name="no_su_permissions">Quest\'applicazione non è in grado di usare i privilegi amministrativi</string>
+  <string name="no_iptables">Il comando "iptables" non è stato trovato</string>
+  <string name="settings_show_ads">Mostra pubblicità</string>
+  <string name="settings_show_ads_text">Imposta il tipo di pubblicità</string>
+  
+   <string name="about_servdroid_web">ServDroid.web è un server statico basato su Android. Questo è un progetto Open Source.\n\n
+       ServDroid.web è stato sviluppato da Joan Puig Sanz.
+       \n\nPer maggiori informazioni visita il sito [[param]]
+        \n\nRingraziamenti Speciali
+       per le traduzioni: Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck,
+       Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale e Alfred Ferrer.
+       \n\nRicorda che puoi manifestare il tuo apprezzamento e/o supporto attraverso una donazione.</string>
+  <string name="donate_info">Essendo un progetto Open Source, non abbiamo alcun introito che ci sostenga nel migliorarlo.
+      \n\n Se ServDroid.Web ti piace, sarebbe fantastico se potessi aiutarci nel portare avanti il progretto attraverso una donazione.
+      \n\n Grazie!</string>
+      
+      <string name="thanks_you">Grazie!</string>
+
+
+</resources>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		Copyright (C) 2010 Joan Puig Sanz Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+	-->
+<resources>
+	<string name="app_name">ServDroid.Web</string>
+
+
+	<string name="text_start">Iniciar</string>
+	<string name="text_starting">Iniciando servidor web...</string>
+	<string name="text_stopping">Parando servidor web...</string>
+	<string name="text_running">Corriendo</string>
+	<string name="text_stopped">Detenido</string>
+	<string name="text_port">Puerto</string>
+	<string name="text_status">Estado:</string>
+	<string name="no_visits">Sin entradas</string>
+	<string name="no_hosts">Sin hosts</string>
+	<string name="server_ip">IP servidor:</string>
+	<string name="table_ip">IP</string>
+	<string name="table_path">Ruta</string>
+	<string name="table_time">Tiempo</string>
+	<string name="text_server_info">Información del servidor:</string>
+	<string name="text_server_info_no_network">No estás conectado</string>
+	<string name="text_server_info_no_wifi">No estás conectado a ninguna red Wi-Fi</string>
+
+
+	<string name="menu_preferences">Preferencias</string>
+	<string name="menu_log">Mostrar registros</string>
+	<string name="menu_refresh_log">Refrescar registros</string>
+	<string name="menu_open_browser">Abrir navegador web</string>
+	<string name="menu_statics">Estadísticas</string>
+	<string name="menu_save_log">Volcar a un fichero</string>
+	<string name="menu_help">Ayuda</string>
+
+	<string name="menu_show_more_info">Mostrar más información</string>
+	<string name="menu_delete">Eliminar entrada</string>
+	<string name="menu_delete_all">Eliminar todas las entradas</string>
+	<string name="menu_clear_list">Limpiar lista</string>
+	<string name="menu_add_black_list">Añadir IP a la lista negra</string>
+	<string name="menu_add_white_list">Añadir IP a la lista blanca</string>
+
+	<string name="enable">Habilitar</string>
+	<string name="disable">Deshabilitar</string>
+	<string name="enabled">Habilitado</string>
+	<string name="disabled">Deshabilitado</string>
+
+	<string name="settings_port">Puerto</string>
+	<string name="settings_max_clients">Clientes máximos</string>
+	<string name="settings_password">Contraseña</string>
+	<string name="settings_white_list">Lista blanca</string>
+	<string name="settings_black_list">Lista negra</string>
+	<string name="settings_www_path">Ruta de los documentos web</string>
+	<string name="settings_error_path">Ruta de los documentos de error</string>
+	<string name="settings_log_path">Ruta donde guardar los registros</string>
+	<string name="settings_cookies">Alguna cookie?</string>
+	<string name="settings_vibrate">Activar vibración</string>
+	<string name="settings_reset_settings">Restaurar preferencias</string>
+
+	<string name="accept">Aceptar</string>
+	<string name="cancel">Cancelar</string>
+	<string name="add_host">Añadir IP</string>
+	<string name="remove_host">Eliminar host</string>
+	<string name="remove">Eliminar</string>
+
+	<string name="server_log">Registros del servidor</string>
+	<string name="log_saved">Los registros se han guardado en</string>
+	<string name="log_not_saved">Error guardando los registros</string>
+
+	<string name="error_stopping_process">ERROR parando el proceso</string>
+	<string name="error_starting_process">ERROR iniciando el proceso</string>
+
+	<string name="saving_log_progress">Guardando los registros...</string>
+	<string name="no_log_entries">NO se han encontrado registros</string>
+	<string name="log_info_1">Mostrando </string>
+	<string name="log_info_2">registros.</string>
+
+	<string name="press_back_button">Presiona de nuevo para salir y detener el servidor
+	</string>
+
+
+	<string name="info_dialog_1">Coloca los documentos HTML en la carpeta</string>
+	<string name="info_dialog_2">para que estos sean servidos a los clientes.
+	</string>
+	<string name="info_dialog_3">Puedes modificar el directorio raiz en las
+		preferencias de la aplicación.</string>
+	<string name="info_dialog_4">También puedes personalizar otros aspectos de la
+		aplicación en las preferencias.</string>
+	<string name="info_dialog_5">Recuerda que para aplicar cualquier cambio, es
+		necesario reiniciar el servicio.</string>
+
+	<string name="information">Información</string>
+
+
+
+
+
+
+	<string name="title_server_settings">Preferencias del servidor</string>
+
+	<string name="chose_port">Definir puerto</string>
+	<string name="server_port">Puerto del servidor</string>
+	<string name="chose_max_clients">Definir número máximo de clientes</string>
+	<string name="server_max_clients">Cuantos clientes pueden acceder al mismo tiempo
+	</string>
+	<string name="chose_www_path">Definir ruta de los documentos</string>
+	<string name="server_www_path">Ruta de los documentos HTML</string>
+	<string name="chose_error_path">Definir ruta de los documentos de error</string>
+	<string name="server_error_path">Donde están los documentos HTML de error
+		(404.html...)  </string>
+	<string name="chose_log_path">Definir la ruta de los registros</string>
+	<string name="server_log_path">Donde se guardan los registros</string>
+	<string name="vibrate">Vibrar</string>
+	<string name="server_vibrate">Cuando recibe una petición, vibra</string>
+
+
+	<string name="title_log_settings">Preferencias de los registros</string>
+
+	<string name="show_entries">Entradas a mostrar</string>
+	<string name="log_entries">Cuantas entradas del registro serán mostradas
+	</string>
+
+
+	<string name="title_other_settings">Otras preferencias</string>
+
+	<string name="reset_configurations">Reiniciar preferencias</string>
+	<string name="other_reset">Reestablecer las configuraciones</string>
+	<string name="reset_configurations_message">Esta opción reestablecera las configuraciones por
+		defecto. ¿Estás seguro?</string>
+
+	<string name="about">Sobre la aplicación</string>
+	<string name="other_about">Sobre ServDroid.web</string>
+
+	<!--  V 0.1.3  -->
+
+	<string name="directory_indexing">Indexado de directorios</string>
+	<string name="server_directory_indexing">Activa el autoindexado cuando no existe el
+		documento index.html
+	</string>
+	<string name="directory_indexing_get_template">Obtener plantilla para el indexado</string>
+	<string name="server_directory_indexing_get_template">Descarga e instala una plantilla para el indexado
+	</string>
+	<string name="directory_indexing_question">¿Estás seguro que quieres descargar la plantilla
+		para el indexado? (recomendado)
+		\n\nRemplazará los archivos ya
+		existentes.
+	</string>
+
+	<string name="installing_template">Instalando plantilla</string>
+	<string name="connecting">Conectando...</string>
+	<string name="downloading">Descargando...</string>
+	<string name="extracting">Extrayendo...</string>
+	<string name="finish_downloading_extracting">Plantilla descargada e instalada correctamente
+	</string>
+	<string name="error_finish_downloading_extracting">Error descargando e instalando la plantilla, prueva
+		de forma manual en la página de ServDropid.Web
+		([[param]]).\n\n¿Ir a la página web?</string>
+	<string name="error">Error</string>
+	<string name="web_page">Página web</string>
+
+	<string name="info_dialog_6">Para personalizar el indexado de directorios, crea un fichero llamado \"default_style.css\" en el directorio donde tengas configurado los documentos del servidor, crea también una carpeta \"icons\" con los siguientes nombres: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
+
+	<string name="info_dialog_7">Puedes encontrar una plantilla en
+	[[param]]</string>
+
+	<string name="release_notes">Notas de lanzamiento</string>
+	<string name="release_notes_info">Cambios:\n\n-0.1.6 URL decoding y activación de todos los puertos (por debajo de 1024 es necessario un telefono rooteado) \n-0.1.5 Mejorado el motor web \n-0.1.4 Mejorado el motor web y solucionado algunos errores\n-0.1.3 Interfaz mejorada, \"indexado de directorios\" añadido, número de entradas mostradas en el visor de registros personalizable (ver preferencias), nuevos idiomas (Italiano, Francés y Holandés) y algunos errores solucionados \n-0.1.2 Errores solucionados\n-0.1.1 Primer lanzamiento\n-0.1 Versión de pruebas</string>
+	<string name="donate">Donar</string>
+	
+	<!-- 0.1.5 -->
+  	<string name="settings_time_expires_cache">Caducidad de la cache</string>
+  	<string name="server_expiration_cache">Tiempo (en minutos) que el contenido es válido por los navegadores web (expiration cache)</string>
+	
+	<!--  0.2 -->
+	<string name="settings_autostart">Política de auto inicio</string>
+	<string name="settings_autostart_on_wifi_on">Iniciar el servidor al conectarse con una red WiFi</string>
+	<string name="settings_autostart_on_wifi_on_text">El servidor se iniciará automáticamente cuando se conecte con una red WiFi</string>
+	<string name="settings_autostop_on_wifi_off">Detener servidor al desconectarse de la red WiFi</string>
+	<string name="settings_autostop_on_wifi_off_text">El servidor será detenido cuando se pierda la conexión WiFi</string>
+	<string name="settings_autostart_on_boot">Arrancar el servidor con el sistema</string>
+	<string name="settings_autostart_on_boot_text">Cuando el sistema se haya encendido, el servidor será automáticamente puesto en funcionamiento</string>
+	<string name="settings_show_notification">Mostrar notificaciones</string>
+	<string name="settings_show_notification_text">Mostrar notificaciones cuando el servidor arranque</string>
+	<string name="no_su_permissions">La aplición no puede acceder como super usuario</string>
+	<string name="no_iptables">El comando "iptables" no se encuentra</string>
+
+  <string name="settings_show_ads">Mostrar propaganda</string>
+  <string name="settings_show_ads_text">Seleccione si quiere mostrar la propaganda</string>
+  
+      <string name="about_servdroid_web">ServDroid.web es un servidor web de contenido estático para Android. Éste es un proyecto de código abierto. 
+	\n\nSi le ha gustado esta aplicación, por favor considere hacer una donación.
+	\n\nMás información en [[param]]
+	\n\nServDroid.Web ha sido programado por Joan Puig Sanz.
+	\n\nEspecial agradecimiento por las traducciones a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale y Alfred Ferrer.
+	</string>
+  <string name="donate_info">
+      Como éste es un proyecto de código abierto, no tiene ingresos por ventas para poder ser mejorado.\n\n
+     Si te ha gustado ServDroid.web, estaría bien hacer una donación para dar soporte.\n\n Muchas gracias!</string>
+  <string name="thanks_you">Muchas gracias!</string>
+
+</resources>

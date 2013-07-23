@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_layout" type="layout">@layout/main_twopanes</item>
+    <bool name="has_two_panes">true</bool>
+</resources>

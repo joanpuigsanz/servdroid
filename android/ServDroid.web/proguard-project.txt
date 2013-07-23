@@ -1,0 +1,86 @@
+# Needed just to be safe in terms of keeping Google API service model classes
+
+-keep class com.google.api.services.*.model.*
+-keep class com.google.api.client.**
+
+-keepattributes Signature,RuntimeVisibleAnnotations,AnnotationDefault
+-keepattributes *Annotation*
+-keepattributes Signature
+-keepattributes EnclosingMethod, InnerClasses
+-keepattributes SourceFile,LineNumberTable
+
+-renamesourcefileattribute SourceFile    
+
+#
+# taken from http://code.google.com/p/roboguice/wiki/ProGuard
+#
+
+-target 1.6
+-dontobfuscate
+#-dontoptimize
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+
+# The -optimizations option disables some arithmetic simplifications that Dalvik 1.0 and 1.5 can't handle.
+#-optimizations !code/simplification/arithmetic
+#-optimizations code/removal/variable
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep class com.google.inject.Binder
+-keepclassmembers class * {
+    @com.google.inject.Inject <init>(...);
+}
+# There's no way to keep all @Observes methods, so use the On*Event convention to identify event handlers
+-keepclassmembers class * {
+    void *(**On*Event);
+}
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public void set*(...);
+}
+
+# The external jars should not be changed. Improve this part in the future? (BTW, future here means never)
+-keep class com.google.inject.** { *; } 
+-keep class javax.inject.** { *; } 
+-keep class javax.annotation.** { *; } 
+-keep class roboguice.** { *; } 
+-keep class com.thoughtworks.xstream.** { *;}
+
+#Keep the classes for XStream
+-keep class com.thoughtworks.xstream.converters.extended.SubjectConverter { *; }
+-keep class com.thoughtworks.xstream.converters.extended.ThrowableConverter { *; }
+-keep class com.thoughtworks.xstream.converters.extended.StackTraceElementConverter { *; }
+-keep class com.thoughtworks.xstream.converters.extended.CurrencyConverter { *; }
+-keep class com.thoughtworks.xstream.converters.extended.RegexPatternConverter { *; }
+-keep class com.thoughtworks.xstream.converters.extended.CharsetConverter { *; }
+-keep class com.thoughtworks.xstream.annotations.** { *; }
+
+
+
+# We do not want any warning from the external libs
+-dontwarn android.support.v4.**
+-dontwarn com.xtremelabs.robolectric.**
+-dontwarn android.accounts.**
+-dontwarn roboguice.**
+
+#We also do not want any note form the following libs:
+-dontnote com.google.vending.licensing.ILicensingService
+-dontnote com.android.vending.licensing.ILicensingService
+-dontnote android.support.v4.**
+-dontnote com.xtremelabs.robolectric.**
+-dontnote android.accounts.**
+-dontnote roboguice.**
+
+# We need to add the module classes for Roboguice
+-keep public class * extends com.google.inject.AbstractModule { *;}
+
+-keep public class * extends org.servDroid.ui.activity.ServDroidBaseFragmentActivity { *;}
+

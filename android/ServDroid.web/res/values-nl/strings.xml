@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		Copyright (C) 2010 Joan Puig Sanz Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+	-->
+<resources>
+
+	<string name="app_name">ServDroid.Web</string>
+	<string name="text_start">Beginnen</string>
+	<string name="text_starting">Webserver opstarten...</string>
+	<string name="text_stopping">Webserver afsluiten...</string>
+	<string name="text_running">In uitvoering</string>
+	<string name="text_stopped">Gestopt</string>
+	<string name="text_port">Poort</string>
+	<string name="text_status">Staat:</string>
+	<string name="no_visits">Zonder bezoeken</string>
+	<string name="no_hosts">Zonder hosts</string>
+	<string name="server_ip">IP Server:</string>
+	<string name="table_ip">IP</string>
+	<string name="table_path">Route</string>
+	<string name="table_time">Tijd</string>
+	<string name="text_server_info">Server informatie:</string>
+	<string name="text_server_info_no_network">Niet verbonden</string>
+	<string name="text_server_info_no_wifi">Niet verbonden aan een Wi-Fi netwerk</string>
+
+
+	<string name="menu_preferences">Voorkeuren</string>
+	<string name="menu_log">Toon registers</string>
+	<string name="menu_refresh_log">Vernieuw registers</string>
+	<string name="menu_open_browser">Open web browser</string>
+	<string name="menu_statics">Statistieken</string>
+	<string name="menu_save_log">Plaats in een bestand</string>
+	<string name="menu_help">Help</string>
+
+	<string name="menu_show_more_info">Toon meer informatie</string>
+	<string name="menu_delete">Wis invoer</string>
+	<string name="menu_delete_all">Wis alle invoeren</string>
+	<string name="menu_clear_list">Schoon lijst op</string>
+	<string name="menu_add_black_list">Voeg IP toe aan zwarte lijst </string>
+	<string name="menu_add_white_list">Voeg IP toe aan witte lijst</string>
+
+	<string name="enable">Inschakelen</string>
+	<string name="disable">Uitschakelen</string>
+	<string name="enabled">Ingeschakeld</string>
+	<string name="disabled">Uitgeschakeld</string>
+
+	<string name="settings_port">Poort</string>
+	<string name="settings_max_clients">Maximum clients</string>
+	<string name="settings_password">Wachtwoord</string>
+	<string name="settings_white_list">Witte lijst</string>
+	<string name="settings_black_list">Zwarte lijst</string>
+	<string name="settings_www_path">Web documenten</string>
+	<string name="settings_error_path">Foutmeldingen</string>
+	<string name="settings_log_path">Registers opslaan</string>
+	<string name="settings_cookies">Cookie?</string>
+	<string name="settings_vibrate">Activeer tril</string>
+	<string name="settings_reset_settings">Voorkeuren herstellen</string>
+
+	<string name="accept">Accepteren</string>
+	<string name="cancel">Annuleren</string>
+	<string name="add_host"> IP toevoegen</string>
+	<string name="remove_host">Host verwijderen</string>
+	<string name="remove">Wissen</string>
+
+	<string name="server_log">Server registers</string>
+	<string name="log_saved">De registers zijn opgeslagen in</string>
+	<string name="log_not_saved">Fout bij het opslaan van de registers</string>
+
+	<string name="error_stopping_process">FOUT bij het stoppen van het proces</string>
+	<string name="error_starting_process">FOUT bij het starten van het proces</string>
+
+	<string name="saving_log_progress">Registers opslaan.</string>
+	<string name="no_log_entries">Registers niet gevonden</string>
+	<string name="log_info_1">Toont </string>
+	<string name="log_info_2">registers.</string>
+
+	<string name="press_back_button">Druk opnieuw om terug te gaan en de server uit te
+		schakelen</string>
+
+
+	<string name="info_dialog_1">Plaats HTML documenten in de map</string>
+	<string name="info_dialog_2">zodat ze aan clienten getoond worden.</string>
+	<string name="info_dialog_3">Je kan de root-directory wijzigen in de applicatie
+		voorkeuren.</string>
+	<string name="info_dialog_4">Ook kan je andere aspecten van de applicatie
+		veranderen in de voorkeuren.</string>
+	<string name="info_dialog_5">Onthoud dat voor het toepassen van een wijziging de
+		server opnieuw moet worden opgestart. </string>
+
+	<string name="information">Informatie</string>
+
+
+
+
+
+
+	<string name="title_server_settings">Server voorkeuren</string>
+
+	<string name="chose_port">Bepaal poort</string>
+	<string name="server_port">Server poort</string>
+	<string name="chose_max_clients">Bepaal maximaal aantal clienten</string>
+	<string name="server_max_clients">Hoeveel clienten hebben tegelijk toegang</string>
+	<string name="chose_www_path">Bepaal path voor documenten</string>
+	<string name="server_www_path">Bepaal path voor HTML documenten</string>
+	<string name="chose_error_path">Bepaal path voor error documenten</string>
+	<string name="server_error_path">Waar zijn de HTML error documenten (404.html...)
+	</string>
+	<string name="chose_log_path">Bepaal het path voor de registers</string>
+	<string name="server_log_path">Waar de registers worden opgeslagen</string>
+	<string name="vibrate">Trillen</string>
+	<string name="server_vibrate">Bij het ontvangen van een petitie, tril</string>
+
+
+	<string name="title_log_settings">Register voorkeuren</string>
+
+	<string name="show_entries">Te tonen inschrijvingen</string>
+	<string name="log_entries">Hoeveel registers worden getoond</string>
+
+
+	<string name="title_other_settings">Andere voorkeuren</string>
+
+	<string name="reset_configurations">Herstel voorkeuren</string>
+	<string name="other_reset">Herstel configuraties</string>
+	<string name="reset_configurations_message">Deze optie herstelt de standaard voorkeuren. Weet
+		je het zeker?</string>
+
+	<string name="about">Over de applicatie </string>
+	<string name="other_about">Over ServDroid.web</string>
+
+	<!--  V 0.1.3  -->
+
+	<string name="directory_indexing">Directory Index</string>
+	<string name="server_directory_indexing">Activeer het auto-indexeren wanneer het document
+		"index.html" niet bestaat
+    </string>
+	<string name="directory_indexing_get_template">Ontvang template voor het indexeren</string>
+	<string name="server_directory_indexing_get_template">Download en installeer een template voor het
+		indexeren
+    </string>
+	<string name="directory_indexing_question">Weet je zeker dat je een template wil downloaden?
+		(aanbevolen)
+		\n\nRemplazará los archivos ya
+		existentes.
+    </string>
+
+	<string name="installing_template">Template aan het installeren</string>
+	<string name="connecting">Maakt verbinding...</string>
+	<string name="downloading">Aan het downloaden...</string>
+	<string name="extracting">Uitpakken...</string>
+	<string name="finish_downloading_extracting">Template met succes gedownload en geïnstalleerd
+	</string>
+	<string name="error_finish_downloading_extracting">Er was een fout bij het downloaden en installeren
+		van de template, probeer
+		het handmatig in de pagina van ServDroid.Web
+		([[param]]).\n\nNaar de website?</string>
+	<string name="error">Fout</string>
+	<string name="web_page">Website</string>
+
+	<string name="info_dialog_6">Voor het personalizeren van de index, maak
+		een bestand \"default_style.css\" aan in de directory waar je de server
+		documenten hebt geconfigureerd, maak ook een map
+		\"icons\" met de volgende namen: css.png, executable.png,
+		go-back.png,
+		pdf.png,
+		script.png, directory.png, file-archiver.png,
+		html.png,
+		picture.png,
+		spreadsheet.png, document.png, file.png,
+		multimedia.png.
+    </string>
+
+	<string name="info_dialog_7">Je kunt een template vinden in: [[param]]
+    </string>
+
+	<string name="release_notes">Uitgave opmerkingen</string>
+	<string name="donate">Doneren</string>
+
+<!-- 0.1.5 -->
+  	<string name="settings_time_expires_cache">Expiration cache</string>
+  	<string name="server_expiration_cache">After how many minutes a page will expire in the browser cache</string>
+  
+  <!--  0.2 -->
+  <string name="settings_autostart">Autostart policy</string>
+  <string name="settings_autostart_on_wifi_on">Start de server wanneer wifi aan gaat</string>
+  <string name="settings_autostart_on_wifi_on_text">Start de server automatisch wanneer er een wifi connectie is gemaakt</string>
+  <string name="settings_autostop_on_wifi_off">Stop de server wanneer de wifi verbinding is verbroken</string>
+  <string name="settings_autostop_on_wifi_off_text">Stop de server automatisch wanneer de wifi connectie is verbroken</string>
+  <string name="settings_autostart_on_boot">Autostart bij opstarten</string>
+  <string name="settings_autostart_on_boot_text">Wanneer de telefoon start, gaat de server automatisch aan</string>
+  <string name="settings_show_notification">Laat berichten zien</string>
+  <string name="settings_show_notification_text">Laat een bericht zien wanneer de server start</string>
+  <string name="no_su_permissions">De applicatie heeft geen "superuser" rechten</string>
+  <string name="no_iptables">Commando "iptables" niet gevonden</string>
+  <string name="settings_show_ads">Laat advertenties zien</string>
+  <string name="settings_show_ads_text">Bepaal het advertentie gedrag</string>
+  <string name="about_servdroid_web">
+	    ServDroid.web is een Android static web server. Dit is een open source project.\n\n
+		ServDroid.web is ontwikkeld door Joan Puig Sanz.
+		\n\nMeer informatie op [[param]]
+		\n\nBedankt:
+		voor vertalen: Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink en Alfred Ferrer.
+		\n\nOverweeg alstublieft om een donatie over te maken.</string>
+  <string name="donate_info">
+      Omdat dit project een open source project is, worden er geen inkomsten/winst gegenereerd om nieuwe features te intregreren of bugs te fixen.\n\n
+      Als ServDroid.Web je goed helpt in je project, dan zouden wij het erg waarderen als u wat zou willen doneren.\n\n
+      Thank you!</string>
+  <string name="thanks_you">Thank you!</string>
+</resources>
+

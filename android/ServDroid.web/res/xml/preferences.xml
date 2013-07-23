@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		Copyright (C) 2010 Joan Puig Sanz Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:persistent="true" >
+
+    <PreferenceCategory android:title="@string/title_server_settings" >
+        <EditTextPreference
+            android:defaultValue="@integer/default_port"
+            android:dialogMessage="@string/chose_port"
+            android:dialogTitle="@string/settings_port"
+            android:inputType="numberDecimal"
+            android:key="@string/pref_port_key"
+            android:summary="@string/server_port"
+            android:title="@string/settings_port" />
+        <EditTextPreference
+            android:defaultValue="@integer/default_max_clients"
+            android:dialogMessage="@string/chose_max_clients"
+            android:dialogTitle="@string/settings_max_clients"
+            android:inputType="numberDecimal"
+            android:key="@string/pref_max_clients_key"
+            android:summary="@string/server_max_clients"
+            android:title="@string/settings_max_clients" />
+        <EditTextPreference
+            android:dialogMessage="@string/chose_www_path"
+            android:dialogTitle="@string/settings_www_path"
+            android:key="@string/pref_www_path_key"
+            android:summary="@string/server_www_path"
+            android:title="@string/settings_www_path" />
+        <EditTextPreference
+            android:dialogMessage="@string/chose_error_path"
+            android:dialogTitle="@string/settings_error_path"
+            android:key="@string/pref_error_path_key"
+            android:summary="@string/server_error_path"
+            android:title="@string/settings_error_path" />
+        <EditTextPreference
+            android:dialogMessage="@string/chose_log_path"
+            android:dialogTitle="@string/settings_log_path"
+            android:key="@string/pref_log_path_key"
+            android:summary="@string/server_log_path"
+            android:title="@string/settings_log_path" />
+        <EditTextPreference
+            android:defaultValue="@integer/default_expiration_cache"
+            android:dialogMessage="@string/server_expiration_cache"
+            android:dialogTitle="@string/settings_time_expires_cache"
+            android:inputType="numberDecimal"
+            android:key="@string/pref_expiration_cache_key"
+            android:summary="@string/server_expiration_cache"
+            android:title="@string/settings_time_expires_cache" />
+
+        <CheckBoxPreference
+            android:defaultValue="@bool/default_vibrate"
+            android:key="@string/pref_vibrate_key"
+            android:summary="@string/server_vibrate"
+            android:title="@string/vibrate" />
+        <CheckBoxPreference
+            android:defaultValue="@bool/default_show_notification"
+            android:key="@string/pref_show_notification_key"
+            android:summary="@string/settings_show_notification_text"
+            android:title="@string/settings_show_notification" />
+
+    </PreferenceCategory>
+        <PreferenceCategory android:title="@string/settings_autostart" >
+            <CheckBoxPreference
+                android:defaultValue="@bool/default_autostart"
+                android:key="@string/pref_autostart_boot_key"
+                android:summary="@string/settings_autostart_on_boot_text"
+                android:title="@string/settings_autostart_on_boot" />
+            <CheckBoxPreference
+                android:defaultValue="@bool/default_autostart"
+                android:key="@string/pref_autostart_wifi_key"
+                android:summary="@string/settings_autostart_on_wifi_on_text"
+                android:title="@string/settings_autostart_on_wifi_on" />
+            <CheckBoxPreference
+                android:defaultValue="@bool/default_autostart"
+                android:dependency="@string/pref_autostart_wifi_key"
+                android:key="@string/pref_autostop_wifi_key"
+                android:summary="@string/settings_autostop_on_wifi_off_text"
+                android:title="@string/settings_autostop_on_wifi_off" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/directory_indexing" >
+            <CheckBoxPreference
+                android:defaultValue="@bool/default_directory_indexing"
+                android:key="@string/pref_directory_indexing_key"
+                android:summary="@string/server_directory_indexing"
+                android:title="@string/directory_indexing" />
+
+            <Preference
+                android:dependency="@string/pref_directory_indexing_key"
+                android:key="@string/pref_directory_indexing_get_template_key"
+                android:summary="@string/server_directory_indexing_get_template"
+                android:title="@string/directory_indexing_get_template" />
+        </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_log_settings" >
+        <ListPreference
+            android:defaultValue="@integer/default_log_entries"
+            android:entries="@array/show_log_entries"
+            android:entryValues="@array/show_log_entries"
+            android:key="@string/pref_log_entries_key"
+            android:summary="@string/log_entries"
+            android:title="@string/show_entries" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_other_settings" >
+        <!-- <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_show_ads_key"
+            android:summary="@string/settings_show_ads_text"
+            android:title="@string/settings_show_ads" /> -->
+
+        <Preference
+            android:key="@string/pref_reset_config_key"
+            android:summary="@string/other_reset"
+            android:title="@string/reset_configurations" />
+        <Preference
+            android:key="@string/pref_about_key"
+            android:summary="@string/other_about"
+            android:title="@string/about" />
+        <Preference
+            android:key="@string/pref_release_notes_key"
+            android:title="@string/release_notes" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

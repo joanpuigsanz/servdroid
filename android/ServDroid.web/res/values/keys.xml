@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 Joan Puig Sanz
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+   <string name="pref_port_key">key_port</string>
+   <string name="pref_max_clients_key">key_max_clients</string>
+   <string name="pref_log_entries_key">key_log_entries</string>
+   <string name="pref_www_path_key">key_www_path</string>
+   <string name="pref_log_path_key">key_log_path</string>
+   <string name="pref_error_path_key">key_error_path</string>
+   <string name="pref_vibrate_key">key_vibrate</string>
+   <string name="pref_reset_config_key">key_reset_config</string>
+   <string name="pref_about_key">key_about</string>
+   <string name="pref_directory_indexing_key">key_file_indexing</string>
+   <string name="pref_directory_indexing_get_template_key">key_file_indexing_get_template</string>
+   <string name="pref_release_notes_key">key_release_notes</string>
+   <string name="pref_expiration_cache_key">key_expiration_cache</string>
+   <!-- v0.2 -->
+   <string name="pref_autostart_boot_key">key_autostart_boot</string>
+   <string name="pref_autostart_wifi_key">key_autostart_wifi</string>
+   <string name="pref_autostop_wifi_key">key_autostop_wifi</string>
+   <string name="pref_show_notification_key">key_show_notification</string>
+   <string name="pref_show_ads_key">key_show_ads</string>
+   <string name="pref_version_key">version</string>
+   
+   
+   <!-- NOT implemented -->
+   <string name="pref_cookies_key">key_cookies</string>
+   <string name="pref_password_key">key_password</string>
+   <string name="pref_black_list_enable_key">key_black_list_enable</string>
+   <string name="pref_white_list_enable_key">key_white_list_enable</string>
+   <string name="pref_password_enable_key">key_password_enable</string>
+   <string name="pref_cookies_enable_key">key_cookies_enable</string>
+   
+</resources>

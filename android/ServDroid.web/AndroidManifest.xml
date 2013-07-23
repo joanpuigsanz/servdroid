@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.servDroid.web"
+    android:versionCode="30001"
+    android:versionName="0.3.0-beta1" >
+
+    <!-- 00030001 0.3.0-beta1 -->
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:name="AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.servDroid.ui.activity.StartActivity"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.servDroid.ui.activity.MainActivityOnePane" />
+        <activity android:name="org.servDroid.ui.activity.MainActivityTwoPanes" />
+        <activity
+            android:name="org.servDroid.ui.activity.LogActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="org.servDroid.ui.activity.WebActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="org.servDroid.ui.activity.SettingsActivity"
+            android:noHistory="true" />
+
+        <service android:name="org.servDroid.server.service.ServerService" >
+            <intent-filter>
+                <action android:name="org.servDroid.server.service.ServiceController" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="org.servDroid.server.service.AutoStartReceiver"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

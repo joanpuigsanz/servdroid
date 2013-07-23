@@ -33,20 +33,12 @@ import android.widget.Toast;
 
 public class PreferenceUiHelper {
 
-	// private CheckBoxPreference mPreferenceAutostartWifi;
-	// private CheckBoxPreference mPreferenceAutostopWifi;
-	// private CheckBoxPreference mPreferenceAutostartBoot;
-	// private CheckBoxPreference mPreferenceShowNotification;
-	// private CheckBoxPreference mPreferenceShowAds;
 	private EditTextPreference mPreferencePort;
 	private EditTextPreference mPreferenceMaxClients;
 	private EditTextPreference mPreferenceWwwPath;
 	private EditTextPreference mPreferenceErrorPath;
 	private EditTextPreference mPreferenceLogPath;
 	private EditTextPreference mPreferenceExpirationCache;
-	// private CheckBoxPreference mPreferenceVibrate;
-	// private CheckBoxPreference mPreferenceFileIndexing;
-	// private ListPreference mPreferenceLogEntries;
 	private Preference mPreferenceResetPref;
 	private Preference mPreferenceAbout;
 	private Preference mPreferenceFileIndexingGetTemplate;
@@ -96,34 +88,10 @@ public class PreferenceUiHelper {
 		mPreferenceErrorPath = (EditTextPreference) getPreference(R.string.pref_error_path_key);
 		mPreferenceLogPath = (EditTextPreference) getPreference(R.string.pref_log_path_key);
 		mPreferenceResetPref = (Preference) getPreference(R.string.pref_reset_config_key);
-		// mPreferenceVibrate = (CheckBoxPreference)
-		// getPreference(R.string.pref_vibrate_key);
-		// mPreferenceFileIndexing = (CheckBoxPreference)
-		// getPreference(R.string.pref_vibrate_key);
-		// mPreferenceAutostartBoot = (CheckBoxPreference)
-		// getPreference(R.string.pref_autostart_boot_key);
-		// mPreferenceAutostartWifi = (CheckBoxPreference)
-		// getPreference(R.string.pref_autostart_wifi_key);
-		// mPreferenceAutostopWifi = (CheckBoxPreference)
-		// getPreference(R.string.pref_autostop_wifi_key);
-		// mPreferenceShowNotification = (CheckBoxPreference)
-		// getPreference(R.string.pref_show_notification_key);
-		// mPreferenceShowAds = (CheckBoxPreference)
-		// getPreference(R.string.pref_show_ads_key);
-		// mPreferenceLogEntries = (ListPreference)
-		// getPreference(R.string.pref_log_entries_key);
 		mPreferenceAbout = (Preference) getPreference(R.string.pref_about_key);
 		mPreferenceFileIndexingGetTemplate = (Preference) getPreference(R.string.pref_directory_indexing_get_template_key);
 		mPreferenceReleaseNotes = (Preference) getPreference(R.string.pref_release_notes_key);
 
-		// if (mStoreHelper == null || !mStoreHelper.hasStoreInfo()) {
-		// mPrefGroup.removePreference(mPreferenceShowAds);
-		// mPreferenceShowAds.setEnabled(false);
-		// mPreferenceShowAds.setChecked(false);
-		// } else {
-		// mPreferenceShowAds.setEnabled(true);
-		// mPreferenceShowAds.setChecked(mStoreHelper.hasDonate());
-		// }
 	}
 
 	private void initializeListeners() {
@@ -131,57 +99,6 @@ public class PreferenceUiHelper {
 		mPreferenceWwwPath.setText(mPreferenceHelper.getWwwPath());
 		mPreferenceErrorPath.setText(mPreferenceHelper.getErrorPath());
 		mPreferenceLogPath.setText(mPreferenceHelper.getLogPath());
-
-		// mPreferenceAutostartWifi.setOnPreferenceChangeListener(new
-		// OnPreferenceChangeListener() {
-		// public boolean onPreferenceChange(Preference preference, Object
-		// newValue) {
-		//
-		// if (newValue instanceof Boolean) {
-		// boolean value = ((Boolean) newValue).booleanValue();
-		// if (value) {
-		// mPreferenceAutostartBoot.setEnabled(false);
-		// mPreferenceAutostopWifi.setEnabled(true);
-		// } else {
-		// mPreferenceAutostartBoot.setEnabled(true);
-		// // mPreferenceAutostopWifi.setChecked(false);
-		// }
-		// }
-		// return true;
-		// }
-		// });
-
-		// if (mStoreHelper != null && mStoreHelper.hasStoreInfo()) {
-		// mPreferenceShowAds.setOnPreferenceClickListener(new
-		// OnPreferenceClickListener() {
-		// @Override
-		// public boolean onPreferenceClick(Preference preference) {
-		// if (!mStoreHelper.hasDonate()) {
-		// DialogFactory.ShowDonateDialog(mActivity, mStoreHelper);
-		// return true;
-		// }
-		// return false;
-		// }
-		// });
-		// }
-
-		// mPreferenceAutostartBoot.setOnPreferenceChangeListener(new
-		// OnPreferenceChangeListener() {
-		// public boolean onPreferenceChange(Preference preference, Object
-		// newValue) {
-		//
-		// if (newValue instanceof Boolean) {
-		// boolean value = ((Boolean) newValue).booleanValue();
-		// if (value) {
-		// mPreferenceAutostartWifi.setEnabled(false);
-		// mPreferenceAutostopWifi.setEnabled(false);
-		// } else {
-		// mPreferenceAutostartWifi.setEnabled(true);
-		// }
-		// }
-		// return true;
-		// }
-		// });
 
 		// Check the port
 		mPreferencePort.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
@@ -238,35 +155,6 @@ public class PreferenceUiHelper {
 				return true;
 			}
 		});
-
-		// mPreferenceWwwPath.setOnPreferenceChangeListener(new
-		// OnPreferenceChangeListener() {
-		//
-		// public boolean onPreferenceChange(Preference preference, Object
-		// newValue) {
-		//
-		// return checkWwwPath((String) newValue);
-		// }
-		// });
-
-		// mPreferenceErrorPath.setOnPreferenceChangeListener(new
-		// OnPreferenceChangeListener() {
-		//
-		// public boolean onPreferenceChange(Preference preference, Object
-		// newValue) {
-		// return checkErrorPath((String) newValue);
-		// }
-		//
-		// });
-
-		// mPreferenceLogPath.setOnPreferenceChangeListener(new
-		// OnPreferenceChangeListener() {
-		//
-		// public boolean onPreferenceChange(Preference preference, Object
-		// newValue) {
-		// return checkLogPath((String) newValue);
-		// }
-		// });
 
 		mPreferenceResetPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
 
@@ -326,7 +214,8 @@ public class PreferenceUiHelper {
 					public void onClick(DialogInterface dialog, int id) {
 						dialog.cancel();
 					}
-				}).setTitle(R.string.other_reset).setIcon(android.R.drawable.ic_dialog_alert);
+				}).setTitle(R.string.other_reset).setIcon(android.R.drawable.ic_dialog_alert)
+				.setCancelable(true);
 		AlertDialog alert = builder.create();
 		alert.show();
 	}
@@ -377,18 +266,13 @@ public class PreferenceUiHelper {
 		builder.show();
 	}
 
-	private void openWebBrowser(String url) {
-		Intent i = new Intent(Intent.ACTION_VIEW);
-		Uri u = Uri.parse(url);
-		i.setData(u);
-		mContext.startActivity(i);
-	}
-
 	private void showErrorDownloadMessage() {
 		AlertDialog.Builder ab = new AlertDialog.Builder(mContext);
 
-		String errorMesage = mContext.getResources().getString(R.string.error_finish_downloading_extracting);
-		errorMesage = errorMesage.replace("[[param]]",mContext.getResources().getString(R.string.url_project_page));
+		String errorMesage = mContext.getResources().getString(
+				R.string.error_finish_downloading_extracting);
+		errorMesage = errorMesage.replace("[[param]]",
+				mContext.getResources().getString(R.string.url_project_page));
 		ab.setMessage(errorMesage).setTitle(R.string.error);
 		ab.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int id) {
@@ -452,7 +336,6 @@ public class PreferenceUiHelper {
 				if (file.exists()) {
 					file.delete();
 				}
-				// file.createNewFile();
 				fos = new FileOutputStream(file);
 
 				publishProgress(contentLenght, 1);
@@ -513,7 +396,5 @@ public class PreferenceUiHelper {
 				showErrorDownloadMessage();
 			}
 		}
-
 	}
-
 }

@@ -3,7 +3,7 @@
 
     <string name="app_name">ServDroid</string>
     <string name="release_notes_info" >Changes:\n\n
-       	-0.3.0 New UI and tablet support\n
+       	-0.3.0 New design and tablet support\n
 	    -0.2.5 Bug fixing\n
 		-0.2.4 Bug fixing\n
 	    -0.2.3 Bug fixing\n
@@ -33,9 +33,9 @@
     <string name="main_option_log">Log</string>
     <string name="main_option_browse_localhost">Browse localhost</string>
     
-    <string name="error_purchase">Error purchasing:</string>
-    <string name="error_purchase_authentication">Error purchasing. Authenticity verification failed.</string>
-    <string name="try_later">Try it later</string>
+    <string name="error_purchase">The purchase could not be completed:</string>
+    <string name="error_purchase_authentication">The purchase could not be completed. Authentication failed.</string>
+    <string name="try_later">Please try again later</string>
 
     <!-- Share text -->
     <string name="share_subject_server">Check out my android web server</string>

@@ -16,8 +16,8 @@
 
 
 	<string name="text_start">Iniciar</string>
-	<string name="text_starting">Iniciando servidor web...</string>
-	<string name="text_stopping">Parando servidor web...</string>
+	<string name="text_starting">Iniciando servidor web&#8230;</string>
+	<string name="text_stopping">Parando servidor web&#8230;</string>
 	<string name="text_running">Corriendo</string>
 	<string name="text_stopped">Detenido</string>
 	<string name="text_port">Puerto</string>
@@ -78,7 +78,7 @@
 	<string name="error_stopping_process">ERROR parando el proceso</string>
 	<string name="error_starting_process">ERROR iniciando el proceso</string>
 
-	<string name="saving_log_progress">Guardando los registros...</string>
+	<string name="saving_log_progress">Guardando los registros&#8230;</string>
 	<string name="no_log_entries">NO se han encontrado registros</string>
 	<string name="log_info_1">Mostrando </string>
 	<string name="log_info_2">registros.</string>
@@ -115,7 +115,7 @@
 	<string name="server_www_path">Ruta de los documentos HTML</string>
 	<string name="chose_error_path">Definir ruta de los documentos de error</string>
 	<string name="server_error_path">Donde están los documentos HTML de error
-		(404.html...)  </string>
+		(404.html&#8230;)  </string>
 	<string name="chose_log_path">Definir la ruta de los registros</string>
 	<string name="server_log_path">Donde se guardan los registros</string>
 	<string name="vibrate">Vibrar</string>
@@ -155,9 +155,9 @@
 	</string>
 
 	<string name="installing_template">Instalando plantilla</string>
-	<string name="connecting">Conectando...</string>
-	<string name="downloading">Descargando...</string>
-	<string name="extracting">Extrayendo...</string>
+	<string name="connecting">Conectando&#8230;</string>
+	<string name="downloading">Descargando&#8230;</string>
+	<string name="extracting">Extrayendo&#8230;</string>
 	<string name="finish_downloading_extracting">Plantilla descargada e instalada correctamente
 	</string>
 	<string name="error_finish_downloading_extracting">Error descargando e instalando la plantilla, prueva

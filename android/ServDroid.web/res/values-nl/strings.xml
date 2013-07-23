@@ -15,8 +15,8 @@
 
 	<string name="app_name">ServDroid.Web</string>
 	<string name="text_start">Beginnen</string>
-	<string name="text_starting">Webserver opstarten...</string>
-	<string name="text_stopping">Webserver afsluiten...</string>
+	<string name="text_starting">Webserver opstarten&#8230;</string>
+	<string name="text_stopping">Webserver afsluiten&#8230;</string>
 	<string name="text_running">In uitvoering</string>
 	<string name="text_stopped">Gestopt</string>
 	<string name="text_port">Poort</string>
@@ -111,7 +111,7 @@
 	<string name="chose_www_path">Bepaal path voor documenten</string>
 	<string name="server_www_path">Bepaal path voor HTML documenten</string>
 	<string name="chose_error_path">Bepaal path voor error documenten</string>
-	<string name="server_error_path">Waar zijn de HTML error documenten (404.html...)
+	<string name="server_error_path">Waar zijn de HTML error documenten (404.html&#8230;)
 	</string>
 	<string name="chose_log_path">Bepaal het path voor de registers</string>
 	<string name="server_log_path">Waar de registers worden opgeslagen</string>
@@ -152,9 +152,9 @@
     </string>
 
 	<string name="installing_template">Template aan het installeren</string>
-	<string name="connecting">Maakt verbinding...</string>
-	<string name="downloading">Aan het downloaden...</string>
-	<string name="extracting">Uitpakken...</string>
+	<string name="connecting">Maakt verbinding&#8230;</string>
+	<string name="downloading">Aan het downloaden&#8230;</string>
+	<string name="extracting">Uitpakken&#8230;</string>
 	<string name="finish_downloading_extracting">Template met succes gedownload en geïnstalleerd
 	</string>
 	<string name="error_finish_downloading_extracting">Er was een fout bij het downloaden en installeren

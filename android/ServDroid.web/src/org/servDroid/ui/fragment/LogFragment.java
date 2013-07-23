@@ -98,9 +98,9 @@ public class LogFragment extends RoboSherlockFragment {
 			for (int i = 0; i < size; i++)
 				mLogAdapter.add(locals.get(i));
 		}
-		Cursor c = mLogHelper.fetchAllLog();
-		int counter = c.getCount();
-		c.close();
+//		Cursor c = mLogHelper.fetchAllLog();
+//		int counter = c.getCount();
+//		c.close();
 
 		mLogAdapter.setItems(locals);
 		mLogAdapter.notifyDataSetChanged();

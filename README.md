@@ -1,7 +1,7 @@
 servdroid
 =========
 
-ServDroid is an small web server for the Android and BlackBerry platforms.
+ServDroid is an small web server for the Android platform.
 
 * Auto start options
 * Can run under port 1024 (iptables and super user rights are required). Check the [wiki](https://github.com/joanpuigsanz/servdroid/wiki/Use-port-under-1024) for more information

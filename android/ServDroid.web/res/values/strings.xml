@@ -20,7 +20,7 @@
 		-0.1.1 first release\n
 		-0.1 Testing version</string>
     
-    <string name="url_project_page">http://joanpuigsanz.github.io/servdroid</string>
+    <string name="url_project_page">http://joanpuigsanz.github.io/servdroid/</string>
     <string name="url_playstore">https://market.android.com/details?id=org.servDroid.web</string>
     <string name="url_download_list">http://code.google.com/p/servdroidweb/downloads/list</string>
     <string name="url_download_template">http://servdroidweb.googlecode.com/files/servdroid-file-indexing-template.zip</string>

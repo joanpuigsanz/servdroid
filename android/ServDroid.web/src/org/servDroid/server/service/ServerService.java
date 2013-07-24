@@ -188,11 +188,11 @@ public class ServerService extends RoboService implements ServerValues {
 
 	private int getServerStatus() {
 		if (null == mServerThread) {
-			return STATUS_STOPED;
+			return STATUS_STOPPED;
 		} else if (mServerThread.isAlive()) {
 			return STATUS_RUNNING;
 		} else {
-			return STATUS_STOPED;
+			return STATUS_STOPPED;
 		}
 	}
 

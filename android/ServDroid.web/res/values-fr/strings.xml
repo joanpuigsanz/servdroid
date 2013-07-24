@@ -14,8 +14,8 @@
 <resources>
 	<string name="app_name">ServDroid.Web</string>
 	<string name="text_start"> Demarrer </string>
-	<string name="text_starting"> Demarrage serveur...</string>
-	<string name="text_stopping"> Arrêt serveur...</string>
+	<string name="text_starting"> Demarrage serveur&#8230;</string>
+	<string name="text_stopping"> Arrêt serveur&#8230;</string>
 	<string name="text_running">Corriendo</string>
 	<string name="text_stopped"> Arrêt </string>
 	<string name="text_port"> Port </string>
@@ -76,7 +76,7 @@
 	<string name="error_stopping_process"> erreur à l’arrêt du processus </string>
 	<string name="error_starting_process"> erreur au démarrage du processus </string>
 
-	<string name="saving_log_progress"> Archives en cours d’enregistrements...</string>
+	<string name="saving_log_progress"> Archives en cours d’enregistrements&#8230;</string>
 	<string name="no_log_entries"> Archives introuvables </string>
 	<string name="log_info_1">Mostrando </string>
 	<string name="log_info_2">registros.</string>
@@ -112,7 +112,7 @@
 	<string name="server_www_path">Accès aux documents </string>
 	<string name="chose_error_path">Définir l’accès aux documents avec erreurs </string>
 	<string name="server_error_path">Où sont les documents HTML donnant une erreur
-		(404.html...)  </string>
+		(404.html&#8230;)  </string>
 	<string name="chose_log_path">Définir l’accès aux archives</string>
 	<string name="server_log_path">Où se gardent les archives </string>
 	<string name="vibrate">Vibrer </string>
@@ -154,10 +154,10 @@
 		fichiers existants.
     </string>
 
-	<string name="installing_template">Instalant modèle...</string>
-	<string name="connecting">Conectant...</string>
-	<string name="downloading">Téléchargeant...</string>
-	<string name="extracting">Extrayant...</string>
+	<string name="installing_template">Instalant modèle&#8230;</string>
+	<string name="connecting">Conectant&#8230;</string>
+	<string name="downloading">Téléchargeant&#8230;</string>
+	<string name="extracting">Extrayant&#8230;</string>
 	<string name="finish_downloading_extracting">Modèle téléchargé et installé correctement
     </string>
 	<string name="error_finish_downloading_extracting">Erreur lors du téléchargement et l\'installation du

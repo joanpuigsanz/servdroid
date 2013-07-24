@@ -5,10 +5,6 @@ import java.util.List;
 
 import org.servDroid.server.service.ServiceController;
 import org.servDroid.server.service.params.ServerParams;
-import org.servDroid.util.Logger;
-
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -16,8 +12,8 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.util.Log;
 
-@Singleton
 public class ServiceHelper implements ServiceConnection, IServiceHelper {
 
 	private static final String TAG = "ServiceHelper";
@@ -33,7 +29,6 @@ public class ServiceHelper implements ServiceConnection, IServiceHelper {
 	private RefreshThread mRefreshThread;
 	private int mRefreshTime = DEFAULT_STATUS_REFRESH_TIME;
 
-	@Inject
 	public ServiceHelper(Context context) {
 		mServiceBinded = false;
 		mContext = context;
@@ -45,7 +40,7 @@ public class ServiceHelper implements ServiceConnection, IServiceHelper {
 	@Override
 	public void onServiceConnected(ComponentName name, IBinder service) {
 		mServiceController = ServiceController.Stub.asInterface(service);
-		Logger.i(TAG, "Connected to ServDroid.web Service");
+		Log.i(TAG, "Connected to ServDroid.web Service");
 		mServiceBinded = true;
 
 		runRunnablesOnConnect();
@@ -56,7 +51,7 @@ public class ServiceHelper implements ServiceConnection, IServiceHelper {
 	@Override
 	public void onServiceDisconnected(ComponentName name) {
 		mServiceBinded = false;
-		Logger.i(TAG, "disconnected from ServDroid.web Service");
+		Log.i(TAG, "disconnected from ServDroid.web Service");
 		runServerEventListener(STATUS_DISCONNECTED);
 
 	}

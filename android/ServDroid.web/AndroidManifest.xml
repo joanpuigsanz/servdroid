@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.servDroid.web"
-    android:versionCode="30001"
-    android:versionName="0.3.0-beta1" >
+    android:versionCode="00030002"
+    android:versionName="0.3.0-beta2" >
 
-    <!-- 00030001 0.3.0-beta1 -->
+    <!-- 00030002 0.3.0-beta2 -->
 
     <uses-sdk
         android:minSdkVersion="8"

@@ -18,7 +18,6 @@ package org.servDroid.db;
 
 import org.servDroid.util.Logger;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -31,7 +30,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * @author Joan Puig Sanz
  * 
  */
-public class ServdroidDbAdapter extends Activity {
+public class ServdroidDbAdapter {
 
 	public static final String KEY_ROWID = "_id";
 	public static final String KEY_HOSTS = "host";
@@ -47,12 +46,6 @@ public class ServdroidDbAdapter extends Activity {
 
 	protected static final String DATABASE_NAME = "servdroid_web";
 	protected static final String DATABASE_LOG_TABLE_ = "web_log";
-	protected static final String DATABASE_TABLE_BLACKLIST = "black_list";
-	protected static final String DATABASE_TABLE_WHITELIST = "white_list";
-
-	// For old versions:
-	protected static final String DATABASE_TABLE_SETTINGS = "settings_list";
-	//
 
 	protected static final int DATABASE_VERSION = 2;
 
@@ -63,12 +56,6 @@ public class ServdroidDbAdapter extends Activity {
 			+ KEY_ROWID + " integer primary key autoincrement, " + KEY_HOSTS + " text not null, "
 			+ KEY_PATH + " text not null, " + KEY_TIME + " long, " + KEY_INFOBEGINING
 			+ " text not null, " + KEY_INFOEND + "  text not null);";
-	private static final String DATABASE_CREATE_BLACK_LIST = "create table "
-			+ DATABASE_TABLE_BLACKLIST + " ( " + KEY_ROWID + " integer primary key autoincrement, "
-			+ KEY_HOSTS + " text not null);";
-	private static final String DATABASE_CREATE_WHITE_LIST = "create table "
-			+ DATABASE_TABLE_WHITELIST + " ( " + KEY_ROWID + " integer primary key autoincrement, "
-			+ KEY_HOSTS + " text not null);";
 
 	private final Context mCtx;
 
@@ -80,21 +67,13 @@ public class ServdroidDbAdapter extends Activity {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-
 			db.execSQL(DATABASE_CREATE_LOG);
-			db.execSQL(DATABASE_CREATE_BLACK_LIST);
-			db.execSQL(DATABASE_CREATE_WHITE_LIST);
-
 		}
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 			Logger.w("Upgrading database from version " + oldVersion + " to " + newVersion
 					+ ", which will destroy all old data");
-			// db.execSQL("DROP TABLE IF EXISTS " + DATABASE_LOG_TABLE_);
-			// db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE_BLACKLIST);
-			// db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE_WHITELIST);
-			// db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE_SETTINGS);
 			onCreate(db);
 		}
 	}
@@ -145,60 +124,6 @@ public class ServdroidDbAdapter extends Activity {
 	}
 
 	/**
-	 * 
-	 * NOT IMPLEMENTED. Add an IP to blacklist server.
-	 * 
-	 * @param rowIdLog
-	 *            the id of log entry which contains the IP.
-	 * @return rowId or -1 if failed, -2 if it already exists
-	 */
-	public long addIpBlackList(long rowIdLog) {
-
-		Cursor cursor = fetchEntry(rowIdLog);
-		startManagingCursor(cursor);
-
-		String mIp = cursor.getString(cursor.getColumnIndexOrThrow(ServdroidDbAdapter.KEY_HOSTS));
-
-		// Cursor blackListCursor = fetchEntryBlackList(mIp);
-		// startManagingCursor(blackListCursor);
-		cursor.close();
-		stopManagingCursor(cursor);
-		return addIpBlackList(mIp);
-
-	}
-
-	/**
-	 * NOT IMPLEMENTED. Add an IP to blacklist server.
-	 * 
-	 * @param ip
-	 *            The IP of the client.
-	 * @return rowId or -1 if failed, -2 if it already exists
-	 */
-	public long addIpBlackList(String ip) {
-
-		Cursor blackListCursor = fetchEntryBlackList(ip);
-		startManagingCursor(blackListCursor);
-
-		if (blackListCursor.getCount() == 0) {
-			Logger.d(ip + " added to blacklist");
-			ContentValues initialValues = new ContentValues();
-			initialValues.put(KEY_HOSTS, ip);
-
-			blackListCursor.close();
-			stopManagingCursor(blackListCursor);
-			return mDb.insert(DATABASE_TABLE_BLACKLIST, null, initialValues);
-
-		} else {
-			Logger.d("IP already in the list");
-			blackListCursor.close();
-			stopManagingCursor(blackListCursor);
-			return -2;
-
-		}
-
-	}
-
-	/**
 	 * Return a Cursor positioned at the log entry that matches the given rowId
 	 * 
 	 * @param rowId
@@ -217,50 +142,6 @@ public class ServdroidDbAdapter extends Activity {
 			cursor.moveToFirst();
 		}
 		return cursor;
-
-	}
-
-	/**
-	 * Return a Cursor positioned at the blacklist IP that matches the given
-	 * rowId
-	 * 
-	 * @param rowId
-	 *            id of blacklist IP to retrieve
-	 * @return Cursor positioned to matching blacklist IP, if found
-	 * @throws SQLException
-	 *             if blacklist IP could not be found/retrieved
-	 */
-	public Cursor fetchEntryBlackList(long rowId) throws SQLException {
-
-		Cursor mCursor =
-
-		mDb.query(true, DATABASE_TABLE_BLACKLIST, new String[] { KEY_ROWID, KEY_HOSTS }, KEY_ROWID
-				+ "=" + rowId, null, null, null, null, null);
-		if (mCursor != null) {
-			mCursor.moveToFirst();
-		}
-		return mCursor;
-
-	}
-
-	/**
-	 * Return a Cursor positioned at the blacklist IP that matches the given
-	 * rowId
-	 * 
-	 * @param ip
-	 *            The blacklist IP
-	 * @return Cursor positioned to matching blacklist IP, if found
-	 * @throws SQLException
-	 */
-	public Cursor fetchEntryBlackList(String ip) throws SQLException {
-
-		Cursor mCursor = mDb.query(true, DATABASE_TABLE_BLACKLIST, new String[] { KEY_HOSTS },
-				KEY_HOSTS + "= \"" + ip + "\"", null, null, null, null, null);
-
-		if (mCursor != null) {
-			mCursor.moveToFirst();
-		}
-		return mCursor;
 
 	}
 

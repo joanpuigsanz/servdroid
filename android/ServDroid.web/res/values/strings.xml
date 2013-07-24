@@ -2,8 +2,8 @@
 <resources>
 
     <string name="app_name">ServDroid</string>
-    <string name="release_notes_info">Changes:\n\n
-       	-0.3.0 New UI and tablet support\n
+    <string name="release_notes_info" >Changes:\n\n
+       	-0.3.0 New design and tablet support\n
 	    -0.2.5 Bug fixing\n
 		-0.2.4 Bug fixing\n
 	    -0.2.3 Bug fixing\n
@@ -19,13 +19,23 @@
 		-0.1.2 Bug fixes\n
 		-0.1.1 first release\n
 		-0.1 Testing version</string>
-    <!-- Main Options -->
-
+    
+    <string name="url_project_page">http://joanpuigsanz.github.io/servdroid</string>
+    <string name="url_playstore">https://market.android.com/details?id=org.servDroid.web</string>
+    <string name="url_download_list">http://code.google.com/p/servdroidweb/downloads/list</string>
+    <string name="url_download_template">http://servdroidweb.googlecode.com/files/servdroid-file-indexing-template.zip</string>
+    
+    
+    <!-- 0.3.0 -->
     <string name="main_menu_options">Options</string>
     <string name="main_menu_share">Share</string>
     <string name="main_option_settings">Settings</string>
     <string name="main_option_log">Log</string>
     <string name="main_option_browse_localhost">Browse localhost</string>
+    
+    <string name="error_purchase">The purchase could not be completed:</string>
+    <string name="error_purchase_authentication">The purchase could not be completed. Authentication failed.</string>
+    <string name="try_later">Please try again later</string>
 
     <!-- Share text -->
     <string name="share_subject_server">Check out my android web server</string>
@@ -35,18 +45,11 @@
     <string name="share_title_link">Share server link</string>
     <string name="share_title_servdroid">Share ServDroid</string>
 
-    <!-- Urls -->
-    <string name="url_project_page">http://joanpuigsanz.github.io/servdroid</string>
-    <string name="url_playstore">https://market.android.com/details?id=org.servDroid.web</string>
-    <string name="url_download_list">http://code.google.com/p/servdroidweb/downloads/list</string>
-    <string name="url_download_template">http://servdroidweb.googlecode.com/files/servdroid-file-indexing-template.zip</string>
-
-    <!--  -->
     <string name="server_url">Server URL:</string>
     <string name="loading">Loading&#8230;</string>
     <string name="error_connecting_service">ERROR connecting with the server</string>
 
-    <!-- to organize -->
+    <!-- 0.2.x -->
     <string name="text_start">Start</string>
     <string name="text_starting">Starting Web Server&#8230;</string>
     <string name="text_stopping">Stopping Web Server&#8230;</string>
@@ -158,9 +161,6 @@
     <!-- Purchase -->
     <string name="donate">Donate</string>
     <string name="thanks_you">Thank you!</string>
-    <string name="error_purchase">Error purchasing:</string>
-    <string name="error_purchase_authentication">Error purchasing. Authenticity verification failed.</string>
-    <string name="try_later">Try it later</string>
 
     <!-- 0.1.5 -->
     <string name="settings_time_expires_cache">Expiration cache</string>

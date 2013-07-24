@@ -52,7 +52,7 @@ public class AutoStartReceiver extends RoboBroadcastReceiver {
 				@Override
 				public void run() {
 					try {
-						serviceHelper.startServer();
+						serviceHelper.startServer(mPreferenceHelper.getServerParameters());
 						Logger.d(TAG, "Autostart ServDorid.web: System boot completed");
 						LogMessage message = new LogMessage("", "",
 								"System boot completed. Starting ServDroid.web", "",
@@ -76,7 +76,7 @@ public class AutoStartReceiver extends RoboBroadcastReceiver {
 							if (serviceHelper.getServiceController().getStatus() == ServerValues.STATUS_RUNNING) {
 								serviceHelper.stopServer();
 							}
-							serviceHelper.startServer();
+							serviceHelper.startServer(mPreferenceHelper.getServerParameters());
 							Logger.d(TAG, "Autostart ServDorid.web:  Wifi connect");
 							LogMessage message = new LogMessage("", "",
 									"Wifi connection stablished. Starting ServDroid.web", "",

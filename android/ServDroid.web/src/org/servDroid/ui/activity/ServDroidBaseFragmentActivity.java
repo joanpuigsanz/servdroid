@@ -49,13 +49,13 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		Bundle extras = getIntent().getExtras();
 		if (extras != null && extras.getBoolean(StartActivity.KEY_NEW_VERSION)) {
 			DialogFactory.ShowDonateDialog(this, storeHelper);
 		}
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		appMenu = menu;
@@ -128,7 +128,10 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 			WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 			subject = getString(R.string.share_subject_server);
 			text = getString(R.string.share_text_server) + " http://"
-					+ NetworkIp.getWifiIp(wifiManager) + ":" + preferenceHelper.getPort();
+					+ NetworkIp.getWifiIp(wifiManager);
+			if (preferenceHelper.getPort() != 80) {
+				text = text + ":" + preferenceHelper.getPort();
+			}
 			shareTitle = getString(R.string.share_title_link);
 		} else {
 			subject = getString(R.string.share_subject_servdroid);
@@ -136,11 +139,9 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 			text = text.replace("[[param]]", getString(R.string.url_playstore));
 			shareTitle = getString(R.string.share_title_servdroid);
 		}
-
 		intent.putExtra(Intent.EXTRA_SUBJECT, subject);
 		intent.putExtra(Intent.EXTRA_TEXT, text);
 		this.startActivity(Intent.createChooser(intent, shareTitle));
-
 	}
 
 	public boolean onKeyUp(int keyCode, KeyEvent event) {

@@ -107,6 +107,7 @@ public class StartStopFragment extends RoboSherlockFragment implements OnChecked
 	private void startServer() {
 		try {
 			serviceHelper.startServer(mPreferenceHelper.getServerParameters());
+			serviceHelper.getServiceController().setVibrate(mPreferenceHelper.getVibrate());
 			Thread.sleep(500);
 			if (serviceHelper.getServiceController().getStatus() == ServerValues.STATUS_RUNNING) {
 				setUrlText(true);

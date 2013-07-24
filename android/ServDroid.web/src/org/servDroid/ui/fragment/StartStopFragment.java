@@ -106,7 +106,7 @@ public class StartStopFragment extends RoboSherlockFragment implements OnChecked
 
 	private void startServer() {
 		try {
-			serviceHelper.startServer();
+			serviceHelper.startServer(mPreferenceHelper.getServerParameters());
 			Thread.sleep(500);
 			if (serviceHelper.getServiceController().getStatus() == ServerValues.STATUS_RUNNING) {
 				setUrlText(true);
@@ -164,7 +164,7 @@ public class StartStopFragment extends RoboSherlockFragment implements OnChecked
 
 		switch (status) {
 		case ServiceHelper.STATUS_RUNNING:
-		case ServiceHelper.STATUS_STOPED:
+		case ServiceHelper.STATUS_STOPPED:
 			getActivity().runOnUiThread(new Runnable() {
 				@Override
 				public void run() {

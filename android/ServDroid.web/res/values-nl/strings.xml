@@ -214,5 +214,27 @@
       Als ServDroid.Web je goed helpt in je project, dan zouden wij het erg waarderen als u wat zou willen doneren.\n\n
       Thank you!</string>
   <string name="thanks_you">Thank you!</string>
+  
+  <!-- 1.0.0 -->
+	<string name="main_menu_options">Opties</string>
+	<string name="main_menu_share">Delen</string>
+	<string name="main_option_settings">Instellingen</string>
+	<string name="main_option_log">Log(Logboek)</string>
+	<string name="main_option_browse_localhost">Bekijk de lokale host</string>
+    <string name="error_purchase">De aankoop kan niet worden voltooid:</string>
+	<string name="error_purchase_authentication">De aankoop kan niet worden voltooid. Verificatie fout</string>
+	<string name="try_later">Probeer het later nog eens</string>
+
+	<!-- Share text -->
+	<string name="share_subject_server">Bekijk mijn Android webserver</string>
+	<string name="share_subject_servdroid">Bekijk Servdroid</string>
+	<string name="share_text_server">Hier is de link naar mijn Android server met dank aan Servdroid: </string>
+	<string name="share_text_servdroid"> Ik gebruik ServDroid om een webserver te draaien op mijn Android toestel, hier is de link: [[param]]</string>
+	<string name="share_title_link">Server link delen</string>
+	<string name="share_title_servdroid"> ServDroid delen</string>
+	<string name="server_url">Server URL:</string>
+	<string name="loading">Laden&#8230;</string>
+	<string name="error_connecting_service">Fout, kan geen verbinding maken met de server</string>
+  
 </resources>
 

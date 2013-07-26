@@ -55,7 +55,7 @@
     <string name="settings_www_path">Ruta de los documentos web</string>
     <string name="settings_error_path">Ruta de los documentos de error</string>
     <string name="settings_log_path">Ruta donde guardar los registros</string>
-    <string name="settings_cookies">Alguna cookie?</string>
+    <string name="settings_cookies">¿Alguna cookie?</string>
     <string name="settings_vibrate">Activar vibración</string>
     <string name="settings_reset_settings">Restaurar preferencias</string>
     <string name="accept">Aceptar</string>
@@ -69,13 +69,13 @@
     <string name="error_stopping_process">ERROR parando el proceso</string>
     <string name="error_starting_process">ERROR iniciando el proceso</string>
     <string name="saving_log_progress">Guardando los registros&#8230;</string>
-    <string name="no_log_entries">NO se han encontrado registros</string>
+    <string name="no_log_entries">No se han encontrado registros</string>
     <string name="log_info_1">Mostrando </string>
     <string name="log_info_2">registros.</string>
     <string name="press_back_button">Presiona de nuevo para salir y detener el servidor</string>
     <string name="info_dialog_1">Coloca los documentos HTML en la carpeta</string>
     <string name="info_dialog_2">para que estos sean servidos a los clientes.</string>
-    <string name="info_dialog_3">Puedes modificar el directorio raiz en las
+    <string name="info_dialog_3">Puedes modificar el directorio raíz en las
 		preferencias de la aplicación.</string>
     <string name="info_dialog_4">También puedes personalizar otros aspectos de la
 		aplicación en las preferencias.</string>
@@ -123,7 +123,7 @@
     <string name="downloading">Descargando&#8230;</string>
     <string name="extracting">Extrayendo&#8230;</string>
     <string name="finish_downloading_extracting">Plantilla descargada e instalada correctamente</string>
-    <string name="error_finish_downloading_extracting">Error descargando e instalando la plantilla, prueva
+    <string name="error_finish_downloading_extracting">Error descargando e instalando la plantilla, prueba
 		de forma manual en la página de ServDropid.Web
 		([[param]]).\n\n¿Ir a la página web?</string>
     <string name="error">Error</string>
@@ -132,11 +132,11 @@
     <string name="info_dialog_7">Puedes encontrar una plantilla en
 	[[param]]</string>
     <string name="release_notes">Notas de lanzamiento</string>
-    <string name="release_notes_info">Cambios:\n\n-0.1.6 URL decoding y activación de todos los puertos (por debajo de 1024 es necessario un telefono rooteado) \n-0.1.5 Mejorado el motor web \n-0.1.4 Mejorado el motor web y solucionado algunos errores\n-0.1.3 Interfaz mejorada, \"indexado de directorios\" añadido, número de entradas mostradas en el visor de registros personalizable (ver preferencias), nuevos idiomas (Italiano, Francés y Holandés) y algunos errores solucionados \n-0.1.2 Errores solucionados\n-0.1.1 Primer lanzamiento\n-0.1 Versión de pruebas</string>
+    
     <string name="donate">Donar</string>
 
     <!-- 0.1.5 -->
-    <string name="settings_time_expires_cache">Caducidad de la cache</string>
+    <string name="settings_time_expires_cache">Caducidad de la caché</string>
     <string name="server_expiration_cache">Tiempo (en minutos) que el contenido es válido por los navegadores web (expiration cache)</string>
 
     <!-- 0.2 -->
@@ -144,22 +144,22 @@
     <string name="settings_autostart_on_wifi_on">Iniciar el servidor al conectarse con una red WiFi</string>
     <string name="settings_autostart_on_wifi_on_text">El servidor se iniciará automáticamente cuando se conecte con una red WiFi</string>
     <string name="settings_autostop_on_wifi_off">Detener servidor al desconectarse de la red WiFi</string>
-    <string name="settings_autostop_on_wifi_off_text">El servidor será detenido cuando se pierda la conexión WiFi</string>
+    <string name="settings_autostop_on_wifi_off_text">El servidor se detendrá cuando se pierda la conexión WiFi</string>
     <string name="settings_autostart_on_boot">Arrancar el servidor con el sistema</string>
-    <string name="settings_autostart_on_boot_text">Cuando el sistema se haya encendido, el servidor será automáticamente puesto en funcionamiento</string>
+    <string name="settings_autostart_on_boot_text">Cuando el sistema se inicie, el servidor se pondrá en funcionamiento automáticamente</string>
     <string name="settings_show_notification">Mostrar notificaciones</string>
     <string name="settings_show_notification_text">Mostrar notificaciones cuando el servidor arranque</string>
     <string name="no_su_permissions">La aplición no puede acceder como super usuario</string>
     <string name="no_iptables">El comando "iptables" no se encuentra</string>
     <string name="settings_show_ads">Mostrar propaganda</string>
     <string name="settings_show_ads_text">Seleccione si quiere mostrar la propaganda</string>
-    <string name="about_servdroid_web">ServDroid.web es un servidor web de contenido estático para Android. Éste es un proyecto de código abierto. 
+    <string name="about_servdroid_web">ServDroid.web es un servidor web de contenido estático para Android. Este es un proyecto de código abierto. 
 	\n\nSi le ha gustado esta aplicación, por favor considere hacer una donación.
 	\n\nMás información en [[param]]
 	\n\nServDroid.Web ha sido programado por Joan Puig Sanz.
 	\n\nEspecial agradecimiento por las traducciones a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
-		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale y Alfred Ferrer.</string>
-    <string name="donate_info">      Como éste es un proyecto de código abierto, no tiene ingresos por ventas para poder ser mejorado.\n\n
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer y Enric Puig.</string>
+    <string name="donate_info">      Como este es un proyecto de código abierto, no tiene ingresos por ventas para poder ser mejorado.\n\n
      Si te ha gustado ServDroid.web, estaría bien hacer una donación para dar soporte.\n\n Muchas gracias!</string>
     <string name="thanks_you">Muchas gracias!</string>
 
@@ -177,8 +177,8 @@
     <!-- Share text -->
     <string name="share_subject_server">Echa un vistazo a mi servidor web en la plataforma Android</string>
     <string name="share_subject_servdroid">Echa un vistazo a ServDroid</string>
-    <string name="share_text_server">Aquí el link a my servidor Android gracias a ServDroid: </string>
-    <string name="share_text_servdroid">Estoy utilizando ServDroid para correr un servidor web in mi dispositivo Android. Aquí el link: [[param]]</string>
+    <string name="share_text_server">Aquí el link a mi servidor Android gracias a ServDroid: </string>
+    <string name="share_text_servdroid">Estoy utilizando ServDroid para correr un servidor web en mi dispositivo Android. Aquí el link: [[param]]</string>
     <string name="share_title_link">Comparte la dirección del servidor</string>
     <string name="share_title_servdroid">Comparte ServDroid</string>
     <string name="server_url">URL del servidor:</string>

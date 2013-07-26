@@ -121,11 +121,11 @@
     <string name="finish_downloading_extracting">Template scaricato ed installato</string>
     <string name="error_finish_downloading_extracting">Errore scaricando il template, prova manualmente
 		dalla pagina web di ServDroid
-		([[param]]).\n\nVai alla pagina di download?</string>
+		(%1$s).\n\nVai alla pagina di download?</string>
     <string name="error">Errore</string>
     <string name="web_page">Pagina Web</string>
     <string name="info_dialog_6">Per personalizzare l\'indicizzazione della cartella e la pagina d\'errore, crea un \"default_style.css\" nel percorso della tua cartella www e crea la cartella \"icons\" contenente questi file: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
-    <string name="info_dialog_7">Puoi trovare un template su [[param]]</string>
+    <string name="info_dialog_7">Puoi trovare un template su %1$s</string>
     <string name="release_notes">Note di Rilascio</string>
     <string name="donate">Dona</string>
     <!-- 0.1.5 -->
@@ -147,7 +147,7 @@
     <string name="settings_show_ads_text">Imposta il tipo di pubblicità</string>
     <string name="about_servdroid_web">ServDroid.web è un server statico basato su Android. Questo è un progetto Open Source.\n\n
        ServDroid.web è stato sviluppato da Joan Puig Sanz.
-       \n\nPer maggiori informazioni visita il sito [[param]]
+       \n\nPer maggiori informazioni visita il sito %1$s
         \n\nRingraziamenti Speciali
        per le traduzioni: Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck,
        Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer e Enric Puig.

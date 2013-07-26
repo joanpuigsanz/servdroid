@@ -162,7 +162,7 @@
     </string>
 	<string name="error_finish_downloading_extracting">Erreur lors du téléchargement et l\'installation du
 		modèle, tester manuellement sur la page ServDropid.Web
-		([[param]]).\n\n¿Visitez le site web?
+		(%1$s).\n\n¿Visitez le site web?
 	</string>
 	<string name="error">Erreur</string>
 	<string name="web_page">Page web</string>
@@ -171,7 +171,7 @@
 
 	<string name="info_dialog_7">Vous pouvez trouver un modèle sur
 
-		[[param]]
+		%1$s
     </string>
 
 	<string name="release_notes">Notes de publication</string>
@@ -200,7 +200,7 @@
   <string name="about_servdroid_web">
         ServDroid.web est un serveur web statique pour Android.\n\n C’est un projet open source.
         ServDroid.web a été développé par Joan Puig Sanz.
-        \n\nInformations complémentaires au [[param]]
+        \n\nInformations complémentaires au %1$s
         \n\nNos remerciements à Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck,
         Francesca Fontana, Pierre Ducoudray, Tatiana Marechale, Alfred Ferrer et Enric Puig pour la traduction.
         \n\nPensez à faire une donation

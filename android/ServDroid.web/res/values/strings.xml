@@ -126,12 +126,12 @@
     <string name="downloading">Downloading&#8230;</string>
     <string name="extracting">Extracting&#8230;</string>
     <string name="finish_downloading_extracting">Template downloaded and installed</string>
-    <string name="error_finish_downloading_extracting">Error downloading template, try manually from ServDroid web page ([[param]]).\n\nGo to download page?</string>
+    <string name="error_finish_downloading_extracting">Error downloading template, try manually from ServDroid web page (%1$s).\n\nGo to download page?</string>
     <string name="error">Error</string>
     <string name="web_page">Web page</string>
     <string name="info_dialog_6">To personalise the directory indexing and error page, create a \"default_style.css\" on your www path and create the folder \"icons\" with these file names: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
     <string name="info_dialog_7">You can find a template at
-		[[param]]</string>
+		%1$s</string>
     <string name="release_notes">Release notes</string>
 
     <!-- Purchase -->
@@ -158,7 +158,7 @@
     <string name="settings_show_ads_text">Setup the advertisement behavior</string>
     <string name="about_servdroid_web">	    ServDroid.web is an Android static web server. This is an open source project.\n\n
 		ServDroid.web was developed by Joan Puig Sanz.
-		\n\nMore information at [[param]]
+		\n\nMore information at %1$s
 		\n\nEspecial thanks
 		for translations to Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
 		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer and Enric Puig.
@@ -182,7 +182,7 @@
     <string name="share_subject_server">Check out my android web server</string>
     <string name="share_subject_servdroid">Check out ServDroid</string>
     <string name="share_text_server">Here is the link to my Android server thanks to ServDroid: </string>
-    <string name="share_text_servdroid">I\'m using ServDroid to run a web server on my Android device, here is the link: [[param]]</string>
+    <string name="share_text_servdroid">I\'m using ServDroid to run a web server on my Android device, here is the link: %1$s</string>
     <string name="share_title_link">Share server link</string>
     <string name="share_title_servdroid">Share ServDroid</string>
 

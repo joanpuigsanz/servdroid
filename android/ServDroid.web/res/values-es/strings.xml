@@ -125,12 +125,12 @@
     <string name="finish_downloading_extracting">Plantilla descargada e instalada correctamente</string>
     <string name="error_finish_downloading_extracting">Error descargando e instalando la plantilla, prueba
 		de forma manual en la página de ServDropid.Web
-		([[param]]).\n\n¿Ir a la página web?</string>
+		(%1$s).\n\n¿Ir a la página web?</string>
     <string name="error">Error</string>
     <string name="web_page">Página web</string>
     <string name="info_dialog_6">Para personalizar el indexado de directorios, crea un fichero llamado \"default_style.css\" en el directorio donde tengas configurado los documentos del servidor, crea también una carpeta \"icons\" con los siguientes nombres: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
     <string name="info_dialog_7">Puedes encontrar una plantilla en
-	[[param]]</string>
+	%1$s</string>
     <string name="release_notes">Notas de lanzamiento</string>
     
     <string name="donate">Donar</string>
@@ -155,7 +155,7 @@
     <string name="settings_show_ads_text">Seleccione si quiere mostrar la propaganda</string>
     <string name="about_servdroid_web">ServDroid.web es un servidor web de contenido estático para Android. Este es un proyecto de código abierto. 
 	\n\nSi le ha gustado esta aplicación, por favor considere hacer una donación.
-	\n\nMás información en [[param]]
+	\n\nMás información en %1$s
 	\n\nServDroid.Web ha sido programado por Joan Puig Sanz.
 	\n\nEspecial agradecimiento por las traducciones a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
 		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer y Enric Puig.</string>
@@ -178,7 +178,7 @@
     <string name="share_subject_server">Echa un vistazo a mi servidor web en la plataforma Android</string>
     <string name="share_subject_servdroid">Echa un vistazo a ServDroid</string>
     <string name="share_text_server">Aquí el link a mi servidor Android gracias a ServDroid: </string>
-    <string name="share_text_servdroid">Estoy utilizando ServDroid para correr un servidor web en mi dispositivo Android. Aquí el link: [[param]]</string>
+    <string name="share_text_servdroid">Estoy utilizando ServDroid para correr un servidor web en mi dispositivo Android. Aquí el link: %1$s</string>
     <string name="share_title_link">Comparte la dirección del servidor</string>
     <string name="share_title_servdroid">Comparte ServDroid</string>
     <string name="server_url">URL del servidor:</string>

@@ -122,12 +122,12 @@
     <string name="finish_downloading_extracting">Plantilla descarregada i instal·lada correctament</string>
     <string name="error_finish_downloading_extracting">Error descarregant i instal·lant la plantilla, prova
 		de forma manual a la pàgina de ServDropid.Web
-		([[param]]).\n\nAnar a la pàgina web?</string>
+		(%1$s).\n\nAnar a la pàgina web?</string>
     <string name="error">Error</string>
     <string name="web_page">Pàgina web</string>
     <string name="info_dialog_6">Per personalitzar l\'indexat de directoris, crea un fitxer amb el nom \"default_style.css\" al directori en el que tinguis configurat els documents del servidor. Crea també una carpeta \"icons\" amb els noms següents: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
     <string name="info_dialog_7">Pots trobar una plantilla a
-	[[param]]</string>
+	%1$s</string>
     <string name="release_notes">Notes de llançament</string>
     
     <string name="donate">Donar</string>
@@ -152,7 +152,7 @@
     <string name="settings_show_ads_text">Seleccioni si vol mostrar la propaganda</string>
     <string name="about_servdroid_web">ServDroid.web és un servidor web de contingut estàtic per a Android. Aquest és un projecte de codi obert. 
 	\n\nSi li ha agradat aquesta aplicació, si us plau consideri fer una donació.
-	\n\nMés informació a [[param]]
+	\n\nMés informació a %1$s
 	\n\nServDroid.Web ha estat programat per Joan Puig Sanz.
 	\n\nEspecial agraïment per les traduccions a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
 		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer i Enric Puig.</string>
@@ -175,7 +175,7 @@
     <string name="share_subject_server">Fes un cop d\'ull al meu servidor web a la plataforma Android</string>
     <string name="share_subject_servdroid">Fes un cop d\'ull a ServDroid</string>
     <string name="share_text_server">Aquí el link al meu servidor Android gracies a ServDroid: </string>
-    <string name="share_text_servdroid">Estic utilitzant ServDroid per còrrer un servidor web al meu dispositiu Android. Aquí el link: [[param]]</string>
+    <string name="share_text_servdroid">Estic utilitzant ServDroid per còrrer un servidor web al meu dispositiu Android. Aquí el link: %1$s</string>
     <string name="share_title_link">Comparteix la direcció del servidor</string>
     <string name="share_title_servdroid">Comparteix ServDroid</string>
     <string name="server_url">URL del servidor:</string>

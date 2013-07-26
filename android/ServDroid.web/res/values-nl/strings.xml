@@ -160,7 +160,7 @@
 	<string name="error_finish_downloading_extracting">Er was een fout bij het downloaden en installeren
 		van de template, probeer
 		het handmatig in de pagina van ServDroid.Web
-		([[param]]).\n\nNaar de website?</string>
+		(%1$s).\n\nNaar de website?</string>
 	<string name="error">Fout</string>
 	<string name="web_page">Website</string>
 
@@ -177,7 +177,7 @@
 		multimedia.png.
     </string>
 
-	<string name="info_dialog_7">Je kunt een template vinden in: [[param]]
+	<string name="info_dialog_7">Je kunt een template vinden in: %1$s
     </string>
 
 	<string name="release_notes">Uitgave opmerkingen</string>
@@ -204,7 +204,7 @@
   <string name="about_servdroid_web">
 	    ServDroid.web is een Android static web server. Dit is een open source project.\n\n
 		ServDroid.web is ontwikkeld door Joan Puig Sanz.
-		\n\nMeer informatie op [[param]]
+		\n\nMeer informatie op %1$s
 		\n\nBedankt:
 		voor vertalen: Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
 		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Alfred Ferrer en Enric Puig.
@@ -229,7 +229,7 @@
 	<string name="share_subject_server">Bekijk mijn Android webserver</string>
 	<string name="share_subject_servdroid">Bekijk Servdroid</string>
 	<string name="share_text_server">Hier is de link naar mijn Android server met dank aan Servdroid: </string>
-	<string name="share_text_servdroid"> Ik gebruik ServDroid om een webserver te draaien op mijn Android toestel, hier is de link: [[param]]</string>
+	<string name="share_text_servdroid"> Ik gebruik ServDroid om een webserver te draaien op mijn Android toestel, hier is de link: %1$s</string>
 	<string name="share_title_link">Server link delen</string>
 	<string name="share_title_servdroid"> ServDroid delen</string>
 	<string name="server_url">Server URL:</string>

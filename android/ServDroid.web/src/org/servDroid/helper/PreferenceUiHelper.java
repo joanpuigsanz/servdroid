@@ -270,8 +270,7 @@ public class PreferenceUiHelper {
 		AlertDialog.Builder ab = new AlertDialog.Builder(mContext);
 
 		String errorMesage = mContext.getResources().getString(
-				R.string.error_finish_downloading_extracting);
-		errorMesage = errorMesage.replace("[[param]]",
+				R.string.error_finish_downloading_extracting,
 				mContext.getResources().getString(R.string.url_project_page));
 		ab.setMessage(errorMesage).setTitle(R.string.error);
 		ab.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

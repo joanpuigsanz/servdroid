@@ -37,11 +37,8 @@ public class DialogFactory {
 						+ "\n\n"
 						+ context.getResources().getString(R.string.info_dialog_6)
 						+ "\n\n"
-						+ context
-								.getResources()
-								.getString(R.string.info_dialog_7)
-								.replace("[[param]]",
-										context.getResources().getString(R.string.url_project_page)))
+						+ context.getResources().getString(R.string.info_dialog_7,
+								context.getResources().getString(R.string.url_project_page)))
 				.setCancelable(true)
 				.setPositiveButton(R.string.web_page, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
@@ -76,8 +73,7 @@ public class DialogFactory {
 	public static void showAboutDialog(final Activity activity, String version,
 			final IStoreHelper storeHelper) {
 
-		String authors = activity.getResources().getString(R.string.about_servdroid_web);
-		authors = authors.replace("[[param]]",
+		String authors = activity.getResources().getString(R.string.about_servdroid_web,
 				activity.getResources().getString(R.string.url_project_page));
 
 		AlertDialog.Builder ab = new AlertDialog.Builder(activity);

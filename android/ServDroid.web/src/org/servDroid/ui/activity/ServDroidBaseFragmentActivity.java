@@ -135,8 +135,7 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 			shareTitle = getString(R.string.share_title_link);
 		} else {
 			subject = getString(R.string.share_subject_servdroid);
-			text = getString(R.string.share_text_servdroid);
-			text = text.replace("[[param]]", getString(R.string.url_playstore));
+			text = getString(R.string.share_text_servdroid, getString(R.string.url_playstore));
 			shareTitle = getString(R.string.share_title_servdroid);
 		}
 		intent.putExtra(Intent.EXTRA_SUBJECT, subject);

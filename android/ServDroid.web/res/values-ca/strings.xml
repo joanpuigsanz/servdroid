@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		Copyright (C) 2010 Joan Puig Sanz Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+-->
+<resources>
+
+    <string name="app_name">ServDroid.Web</string>
+    <string name="text_start">Iniciar</string>
+    <string name="text_starting">Iniciant servidor web&#8230;</string>
+    <string name="text_stopping">Aturant servidor web&#8230;</string>
+    <string name="text_running">En execució</string>
+    <string name="text_stopped">Aturat</string>
+    <string name="text_port">Port</string>
+    <string name="text_status">Estat:</string>
+    <string name="no_visits">Sense entrades</string>
+    <string name="no_hosts">Sense hosts</string>
+    <string name="server_ip">IP servidor:</string>
+    <string name="table_ip">IP</string>
+    <string name="table_path">Ruta</string>
+    <string name="table_time">Temps</string>
+    <string name="text_server_info">Informació del servidor:</string>
+    <string name="text_server_info_no_network">No estàs connectat</string>
+    <string name="text_server_info_no_wifi">No estàs connectat a cap xarxa Wi-Fi</string>
+    <string name="menu_preferences">Preferències</string>
+    <string name="menu_log">Mostrar registres</string>
+    <string name="menu_refresh_log">Refrescar registres</string>
+    <string name="menu_open_browser">Obrir navegador web</string>
+    <string name="menu_statics">Estadístiques</string>
+    <string name="menu_save_log">Bolcar a un fitxer</string>
+    <string name="menu_help">Ajuda</string>
+    <string name="menu_show_more_info">Mostrar més informació</string>
+    <string name="menu_delete">Eliminar entrada</string>
+    <string name="menu_delete_all">Eliminar totes les entrades</string>
+    <string name="menu_clear_list">Netejar llista</string>
+    <string name="menu_add_black_list">Afegir IP a la llista negra</string>
+    <string name="menu_add_white_list">Afegir IP a la llista blanca</string>
+    <string name="enable">Habilitar</string>
+    <string name="disable">Inhabilitar</string>
+    <string name="enabled">Habilitat</string>
+    <string name="disabled">Deshabilitat</string>
+    <string name="settings_port">Port</string>
+    <string name="settings_max_clients">Clients màxims</string>
+    <string name="settings_password">Contrassenya</string>
+    <string name="settings_white_list">Llista blanca</string>
+    <string name="settings_black_list">Llista negra</string>
+    <string name="settings_www_path">Ruta dels documents web</string>
+    <string name="settings_error_path">Ruta dels documents d\'error</string>
+    <string name="settings_log_path">Ruta on guardar els registres</string>
+    <string name="settings_cookies">Alguna cookie?</string>
+    <string name="settings_vibrate">Activar vibració</string>
+    <string name="settings_reset_settings">Restaurar preferències</string>
+    <string name="accept">Acceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="add_host">Afegir IP</string>
+    <string name="remove_host">Eliminar host</string>
+    <string name="remove">Eliminar</string>
+    <string name="server_log">Registres del servidor</string>
+    <string name="log_saved">Els registres s\'han guardat a</string>
+    <string name="log_not_saved">Error guardant els registres</string>
+    <string name="error_stopping_process">ERROR aturant el procés</string>
+    <string name="error_starting_process">ERROR iniciant el procés</string>
+    <string name="saving_log_progress">Guardant els registres&#8230;</string>
+    <string name="no_log_entries">NO s\'han trobat registres</string>
+    <string name="log_info_1">Mostrant </string>
+    <string name="log_info_2">registres.</string>
+    <string name="press_back_button">Prèm de nou per sortir i aturar el servidor</string>
+    <string name="info_dialog_1">Col·loca els documents HTML a la carpeta</string>
+    <string name="info_dialog_2">per tal que siguin servits als clients.</string>
+    <string name="info_dialog_3">Pots modificar el directori arrel a les
+		preferències de l\'aplicació.</string>
+    <string name="info_dialog_4">També pots personalitzar altres aspectes de l\'aplicació a les preferències.</string>
+    <string name="info_dialog_5">Recorda que per a aplicar qualsevol canvi, cal reiniciar el servei.</string>
+    <string name="information">Informació</string>
+    <string name="title_server_settings">Preferències del servidor</string>
+    <string name="chose_port">Definir port</string>
+    <string name="server_port">Port del servidor</string>
+    <string name="chose_max_clients">Definir nombre màxim de clients</string>
+    <string name="server_max_clients">Quants clients poden accedir al mateix temps</string>
+    <string name="chose_www_path">Definir ruta dels documents</string>
+    <string name="server_www_path">Ruta dels documents HTML</string>
+    <string name="chose_error_path">Definir ruta dels documents d\'error</string>
+    <string name="server_error_path">On estan els documents HTML d\'error
+		(404.html&#8230;)  </string>
+    <string name="chose_log_path">Definir la ruta dels registres</string>
+    <string name="server_log_path">On es guarden els registres</string>
+    <string name="vibrate">Vibrar</string>
+    <string name="server_vibrate">Quan rep una petició, vibra</string>
+    <string name="title_log_settings">Preferències dels registres</string>
+    <string name="show_entries">Entrades a mostrar</string>
+    <string name="log_entries">Quantes entrades del registre seran mostrades</string>
+    <string name="title_other_settings">Altres preferències</string>
+    <string name="reset_configurations">Reiniciar preferències</string>
+    <string name="other_reset">Restablir les configuracions</string>
+    <string name="reset_configurations_message">Aquesta opció restablirà les configuracions per
+		defecte. N\'estàs segur?</string>
+    <string name="about">Sobre l\'aplicació</string>
+    <string name="other_about">Sobre ServDroid.web</string>
+
+    <!-- V 0.1.3 -->
+
+    <string name="directory_indexing">Indexat de directoris</string>
+    <string name="server_directory_indexing">Activa l\'autoindexat quan no existeix el
+		document index.html</string>
+    <string name="directory_indexing_get_template">Obtenir plantilla per a l\'indexat</string>
+    <string name="server_directory_indexing_get_template">Descarrega i instal·la una plantilla per a l\'indexat</string>
+    <string name="directory_indexing_question">Estàs segur que vols descarregar la plantilla
+		per a l\'indexat? (recomenat)
+		\n\nSubstituirà els arxius que ja existeixen.</string>
+    <string name="installing_template">Instal·lant plantilla</string>
+    <string name="connecting">Connectant&#8230;</string>
+    <string name="downloading">Descarregant&#8230;</string>
+    <string name="extracting">Extraient&#8230;</string>
+    <string name="finish_downloading_extracting">Plantilla descarregada i instal·lada correctament</string>
+    <string name="error_finish_downloading_extracting">Error descarregant i instal·lant la plantilla, prova
+		de forma manual a la pàgina de ServDropid.Web
+		([[param]]).\n\nAnar a la pàgina web?</string>
+    <string name="error">Error</string>
+    <string name="web_page">Pàgina web</string>
+    <string name="info_dialog_6">Per personalitzar l\'indexat de directoris, crea un fitxer amb el nom \"default_style.css\" al directori en el que tinguis configurat els documents del servidor. Crea també una carpeta \"icons\" amb els noms següents: css.png, executable.png, go-back.png, pdf.png, script.png, directory.png, file-archiver.png, html.png, picture.png, spreadsheet.png, document.png, file.png, multimedia.png.</string>
+    <string name="info_dialog_7">Pots trobar una plantilla a
+	[[param]]</string>
+    <string name="release_notes">Notes de llançament</string>
+    
+    <string name="donate">Donar</string>
+
+    <!-- 0.1.5 -->
+    <string name="settings_time_expires_cache">Caducitat de la caché</string>
+    <string name="server_expiration_cache">Temps (en minuts) que el contingut és válid pels navegadors web (expiration cache)</string>
+
+    <!-- 0.2 -->
+    <string name="settings_autostart">Política d\'auto inici</string>
+    <string name="settings_autostart_on_wifi_on">Iniciar el servidor en connectar-se amb una xarxa WiFi</string>
+    <string name="settings_autostart_on_wifi_on_text">El servidor s\'iniciarà automàticament quan es connecti amb una xarxa WiFi</string>
+    <string name="settings_autostop_on_wifi_off">Aturar servidor en desconnectar-se de la xarxa WiFi</string>
+    <string name="settings_autostop_on_wifi_off_text">El servidor s\'aturarà quan es perdi la connexió WiFi</string>
+    <string name="settings_autostart_on_boot">Arrancar el servidor amb el sistema</string>
+    <string name="settings_autostart_on_boot_text">Quan el sistema s\'hagi iniciat, el servidor es posarà en funcionament automàticament</string>
+    <string name="settings_show_notification">Mostrar notificacions</string>
+    <string name="settings_show_notification_text">Mostrar notificacions quan el servidor arranqui</string>
+    <string name="no_su_permissions">L\'aplició no pot accedir com a super usuari</string>
+    <string name="no_iptables">El comandament "iptables" no es troba</string>
+    <string name="settings_show_ads">Mostrar propaganda</string>
+    <string name="settings_show_ads_text">Seleccioni si vol mostrar la propaganda</string>
+    <string name="about_servdroid_web">ServDroid.web és un servidor web de contingut estàtic per a Android. Aquest és un projecte de codi obert. 
+	\n\nSi li ha agradat aquesta aplicació, si us plau consideri fer una donació.
+	\n\nMés informació a [[param]]
+	\n\nServDroid.Web ha estat programat per Joan Puig Sanz.
+	\n\nEspecial agraïment per les traduccions a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer i Enric Puig.</string>
+    <string name="donate_info">      Donat que aquest projecte és de codi obert, no té ingressos per vendes que li ajudin a millorar.\n\n
+     Si t\'ha agradat ServDroid.web, estaria bé fer una donació per donar soport.\n\n Moltes gracies!</string>
+    <string name="thanks_you">Moltes gracies!</string>
+
+    <!-- 0.3.0 -->
+
+    <string name="main_menu_options">Opcions</string>
+    <string name="main_menu_share">Compartir</string>
+    <string name="main_option_settings">Preferències</string>
+    <string name="main_option_log">Log</string>
+    <string name="main_option_browse_localhost">Navegar en localhost</string>
+    <string name="error_purchase">Error realitzant la compra:</string>
+    <string name="error_purchase_authentication">Error realitzant la compra. Autenticació fallida.</string>
+   <string name="try_later">Torni a intentar-ho més tard</string>
+
+    <!-- Share text -->
+    <string name="share_subject_server">Fes un cop d\'ull al meu servidor web a la plataforma Android</string>
+    <string name="share_subject_servdroid">Fes un cop d\'ull a ServDroid</string>
+    <string name="share_text_server">Aquí el link al meu servidor Android gracies a ServDroid: </string>
+    <string name="share_text_servdroid">Estic utilitzant ServDroid per còrrer un servidor web al meu dispositiu Android. Aquí el link: [[param]]</string>
+    <string name="share_title_link">Comparteix la direcció del servidor</string>
+    <string name="share_title_servdroid">Comparteix ServDroid</string>
+    <string name="server_url">URL del servidor:</string>
+    <string name="loading">Carregant&#8230;</string>
+    <string name="error_connecting_service">ERROR connectant amb el servidor</string>
+
+</resources>

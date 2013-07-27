@@ -31,3 +31,6 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+#store lib
+servdroid-store.jar

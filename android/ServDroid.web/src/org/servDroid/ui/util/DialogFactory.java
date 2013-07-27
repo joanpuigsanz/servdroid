@@ -102,6 +102,11 @@ public class DialogFactory {
 					public void onClick(DialogInterface dialog, int id) {
 						storeHelper.doDonationPurchase(activity);
 					}
+				}).setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener(){
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
 				});
 		builder.setIcon(android.R.drawable.ic_dialog_info);
 		builder.create();

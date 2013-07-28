@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 Joan Puig Sanz
+ * Copyright (C) 2013 Joan Puig Sanz
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,8 +48,7 @@ public class LogMessage implements Parcelable {
 		mInfoEnd = "";
 	}
 
-	public LogMessage(String ip, String path, String infoBegining,
-			String infoEnd, long timeStamp) {
+	public LogMessage(String ip, String path, String infoBegining, String infoEnd, long timeStamp) {
 		mIp = ip;
 		mPath = path;
 		mInfoBegining = infoBegining;
@@ -128,8 +127,8 @@ public class LogMessage implements Parcelable {
 		Date timeStamp = new Date(getTimeStamp());
 
 		SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy HH:mm:ss", Locale.getDefault());
-	    String asGmt = df.format(timeStamp) + " GMT";
-		
+		String asGmt = df.format(timeStamp) + " GMT";
+
 		line = line + "[" + asGmt + "]";
 
 		String begining = getInfoBegining();
@@ -153,5 +152,5 @@ public class LogMessage implements Parcelable {
 		}
 		return line;
 	}
-	
+
 }

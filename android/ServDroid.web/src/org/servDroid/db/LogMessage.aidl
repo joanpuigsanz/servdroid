@@ -1,6 +1,5 @@
-package org.servDroid.db;
 /*
- * Copyright (C) 2010 Joan Puig Sanz
+ * Copyright (C) 2013 Joan Puig Sanz
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,5 +13,7 @@ package org.servDroid.db;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+package org.servDroid.db;
 
 parcelable LogMessage;

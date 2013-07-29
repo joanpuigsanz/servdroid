@@ -49,7 +49,7 @@ public class LogActivity extends ServDroidBaseFragmentActivity {
 		}
 		mLogFragment.addLogMenu(menu);
 	}
-
+	
 	@Override
 	public void onOptionClick(int id) {
 		switch (id) {

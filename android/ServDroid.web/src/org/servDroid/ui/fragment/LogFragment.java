@@ -181,8 +181,7 @@ public class LogFragment extends RoboSherlockFragment {
 		if (menu == null) {
 			return -1;
 		}
-		SubMenu subMenuOptions = menu.addSubMenu(Menu.NONE, MENU_ID_LOG, Menu.NONE,
-				R.string.main_menu_options);
+		SubMenu subMenuOptions = menu.addSubMenu(R.string.main_menu_options);
 
 		for (int i = 0; i < mOptions.getLogOptions().size(); i++) {
 			IMainOption option = mOptions.getLogOptions().get(i);

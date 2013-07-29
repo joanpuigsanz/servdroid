@@ -100,6 +100,7 @@ public class ServiceHelper implements ServiceConnection, IServiceHelper {
 	public boolean startServer(ServerParams params) throws RemoteException {
 		if (mServiceController == null || !isServiceConected()) {
 			connect();
+			return false;
 		}
 		return mServiceController.startService(params);
 	}

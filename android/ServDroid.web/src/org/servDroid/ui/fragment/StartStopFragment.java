@@ -41,10 +41,9 @@ import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ToggleButton;
 
-import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
 import com.google.inject.Inject;
 
-public class StartStopFragment extends RoboSherlockFragment implements OnCheckedChangeListener,
+public class StartStopFragment extends ServDroidBaseFragment implements OnCheckedChangeListener,
 		ServerStatusListener {
 
 	@InjectView(R.id.toggleButtonStartStop)

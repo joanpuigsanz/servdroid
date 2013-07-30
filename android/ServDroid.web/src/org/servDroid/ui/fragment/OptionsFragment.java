@@ -31,10 +31,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
 import com.google.inject.Inject;
 
-public class OptionsFragment extends RoboSherlockFragment implements OnItemClickListener {
+public class OptionsFragment extends ServDroidBaseFragment implements OnItemClickListener {
 
 	@InjectView(R.id.listViewMainFragment)
 	ListView mListOption;

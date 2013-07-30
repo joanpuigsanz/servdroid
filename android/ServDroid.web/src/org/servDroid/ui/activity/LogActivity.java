@@ -23,6 +23,7 @@ import org.servDroid.web.R;
 
 import roboguice.inject.InjectFragment;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import com.actionbarsherlock.view.Menu;
 import com.google.inject.Inject;
@@ -47,7 +48,15 @@ public class LogActivity extends ServDroidBaseFragmentActivity {
 		if (hasTwoPanes || menu == null) {
 			return;
 		}
-		mLogFragment.addLogMenu(menu);
+		mLogFragment.addSpecificMenu(menu);
+	}
+	
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_MENU) {
+			appMenu.performIdentifierAction(LogFragment.MENU_ID_LOG, 1);
+			return true;
+		}
+		return super.onKeyUp(keyCode, event);
 	}
 	
 	@Override

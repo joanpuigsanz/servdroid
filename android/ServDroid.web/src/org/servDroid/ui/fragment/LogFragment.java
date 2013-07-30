@@ -53,12 +53,13 @@ import android.widget.Toast;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.SubMenu;
-import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
 import com.google.inject.Inject;
 
-public class LogFragment extends RoboSherlockFragment {
+public class LogFragment extends ServDroidBaseFragment {
 
 	public static final int MENU_ID_LOG = 3554;
+	
+	public static final int MENU_GROUP_ID = MENU_ID_LOG + 300 ;
 
 	private static final int REFRESH_TIME = 5000;
 
@@ -177,11 +178,12 @@ public class LogFragment extends RoboSherlockFragment {
 		}
 	}
 
-	public int addLogMenu(Menu menu) {
+	@Override
+	public void addSpecificMenu(Menu menu) {
 		if (menu == null) {
-			return -1;
+			return;
 		}
-		SubMenu subMenuOptions = menu.addSubMenu(R.string.main_menu_options);
+		SubMenu subMenuOptions = menu.addSubMenu(MENU_GROUP_ID, MENU_ID_LOG, 0, R.string.main_menu_options);
 
 		for (int i = 0; i < mOptions.getLogOptions().size(); i++) {
 			IMainOption option = mOptions.getLogOptions().get(i);
@@ -192,8 +194,12 @@ public class LogFragment extends RoboSherlockFragment {
 		MenuOptions.setIcon(R.drawable.abs__ic_menu_moreoverflow_normal_holo_dark);
 		MenuOptions.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM
 				| MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-		return MENU_ID_LOG;
-
+	}
+	
+	@Override
+	public void removeSpecificMenu(Menu menu) {
+		super.removeSpecificMenu(menu);
+		menu.removeGroup(MENU_GROUP_ID);
 	}
 
 	public void deleteLog() {

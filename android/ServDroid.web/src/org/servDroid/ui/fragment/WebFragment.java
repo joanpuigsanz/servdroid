@@ -29,10 +29,9 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockFragment;
 import com.google.inject.Inject;
 
-public class WebFragment extends RoboSherlockFragment {
+public class WebFragment extends ServDroidBaseFragment {
 
 	@Inject
 	IPreferenceHelper preferenceHelper;

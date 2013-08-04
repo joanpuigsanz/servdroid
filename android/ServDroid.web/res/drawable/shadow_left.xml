@@ -14,17 +14,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/activatedBackgroundIndicator"
-    android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/textViewListRowOption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:textStyle="bold" />
-
-</LinearLayout>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<gradient
+    android:angle="0"
+    android:startColor="#00000000" 
+    android:endColor="#55000000"
+    />
+</shape>

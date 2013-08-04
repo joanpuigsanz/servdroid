@@ -32,12 +32,18 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     
-    <style name="separator">
+    <style name="horizontal_separator">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">2dip</item>
         <item name="android:background">@android:color/darker_gray</item>
         <item name="android:layout_marginTop">2dip</item>
         <item name="android:layout_marginBottom">2dip</item>
+    </style>
+    
+    <style name="vertical_separator">
+        <item name="android:layout_width">10dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/shadow_left</item>
     </style>
 
 </resources>

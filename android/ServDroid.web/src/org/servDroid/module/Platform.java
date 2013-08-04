@@ -22,6 +22,8 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
@@ -32,6 +34,9 @@ public class Platform extends AbstractModule {
 	public final static String APP_VERSION_NAME = "appVersionName";
 	public final static String APP_VERSION_CODE = "appVersionCode";
 	public final static String HAS_TWO_PANES = "hasTwoPanes";
+	public final static String DENSITY_DPI = "densityDpi";
+	
+	private int mDensityDpi;
 
 	@Override
 	protected void configure() {
@@ -61,6 +66,19 @@ public class Platform extends AbstractModule {
 		} catch (PackageManager.NameNotFoundException e) {
 			return "";
 		}
+	}
+
+	@Provides
+	@Named(DENSITY_DPI)
+	public int getDensityDpi(Context context) {
+
+		WindowManager windowsManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+
+		DisplayMetrics metrics = new DisplayMetrics();
+		windowsManager.getDefaultDisplay().getMetrics(metrics);
+		mDensityDpi = metrics.densityDpi;
+
+		return mDensityDpi;
 	}
 
 	private PackageInfo getPackageInfo(Context context) throws NameNotFoundException {

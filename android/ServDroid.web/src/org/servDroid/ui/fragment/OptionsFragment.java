@@ -75,16 +75,17 @@ public class OptionsFragment extends ServDroidBaseFragment implements OnItemClic
 		super.onViewCreated(view, savedInstanceState);
 
 		mListOption.setAdapter(mAdapter);
-
 		mListOption.setOnItemClickListener(this);
+		// Perform a click to allow the selector to set the proper background
+		mListOption.performItemClick(mListOption, 0, mListOption.getItemIdAtPosition(0));
 
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
-		if (mOptionClickListener != null) {
-			mOptionClickListener.onOptionClick((int) id);
-		}
+		if (mOptionClickListener == null) return;
+		
+		mOptionClickListener.onOptionClick((int) id);
 	}
 
 	public interface OnOptionClickListener {

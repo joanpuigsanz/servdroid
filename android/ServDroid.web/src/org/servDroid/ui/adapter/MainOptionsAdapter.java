@@ -35,7 +35,9 @@ public class MainOptionsAdapter extends ArrayAdapter<IMainOption> {
 	private LayoutInflater mInflater;
 
 	private Context mContext;
-
+	
+	private int mActivatedPosistion;
+	
 	public MainOptionsAdapter(Context context, List<IMainOption> element) {
 		super(context, R.layout.list_row_options, element);
 		mElements = element;
@@ -58,7 +60,7 @@ public class MainOptionsAdapter extends ArrayAdapter<IMainOption> {
 		}
 		return mElements.get(position);
 	}
-
+	
 	@Override
 	public long getItemId(int position) {
 		if (mElements== null || position < 0 || position >= mElements.size()) {
@@ -70,8 +72,11 @@ public class MainOptionsAdapter extends ArrayAdapter<IMainOption> {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View view = convertView;
-		if (convertView == null)
+		if (convertView == null){
 			view = mInflater.inflate(R.layout.list_row_options, null);
+			view.setId(position);
+		}
+		
 
 		IMainOption option = getItem(position);
 		if (option == null) {
@@ -84,6 +89,8 @@ public class MainOptionsAdapter extends ArrayAdapter<IMainOption> {
 		text.setCompoundDrawablesWithIntrinsicBounds(
 				mContext.getResources().getDrawable(option.getResourceImage()), null,
 				null, null);
+		
+		view.setActivated(mActivatedPosistion == position);
 
 		return view;
 	}

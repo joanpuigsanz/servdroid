@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <View style="@style/separator" />
+    <View style="@style/horizontal_separator" />
 
     <fragment
         android:id="@+id/logFragment"

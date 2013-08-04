@@ -14,5 +14,7 @@
      limitations under the License.
 -->
 <resources>
-
+    <color name="selected_item">#33B5E5</color>
+    <color name="pressed_item">#0099CC</color>
+    <color name="default_item">@android:color/transparent</color>
 </resources>

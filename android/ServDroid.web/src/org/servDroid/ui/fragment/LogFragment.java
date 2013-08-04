@@ -58,13 +58,21 @@ import com.google.inject.Inject;
 public class LogFragment extends ServDroidBaseFragment {
 
 	public static final int MENU_ID_LOG = 3554;
-	
-	public static final int MENU_GROUP_ID = MENU_ID_LOG + 300 ;
+
+	public static final int MENU_GROUP_ID = MENU_ID_LOG + 300;
 
 	private static final int REFRESH_TIME = 5000;
 
+	public static final String PARAM_PADDING_BOTTOM = "padding_bottom";
+	public static final String PARAM_PADDING_TOP = "padding_top";
+	public static final String PARAM_PADDING_LEFT = "padding_left";
+	public static final String PARAM_PADDING_RIGHT = "padding_right";
+
 	@InjectView(R.id.listViewLogFragment)
 	private ListView mListView;
+
+	@InjectView(R.id.logViewLayout)
+	private View mLogViewLayout;
 
 	private LogListAdapter mLogAdapter;
 
@@ -103,6 +111,28 @@ public class LogFragment extends ServDroidBaseFragment {
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		mListView.setAdapter(mLogAdapter);
+		processArguments();
+	}
+
+	private void processArguments() {
+		if (getArguments() == null)
+			return;
+
+		int paddingTop = 0, paddingBottom = 0, paddingRight = 0, paddingLeft = 0;
+
+		if (getArguments().containsKey(PARAM_PADDING_TOP)) {
+			paddingTop = getArguments().getInt(PARAM_PADDING_TOP);
+		}
+		if (getArguments().containsKey(PARAM_PADDING_BOTTOM)) {
+			paddingBottom = getArguments().getInt(PARAM_PADDING_BOTTOM);
+		}
+		if (getArguments().containsKey(PARAM_PADDING_LEFT)) {
+			paddingLeft = getArguments().getInt(PARAM_PADDING_LEFT);
+		}
+		if (getArguments().containsKey(PARAM_PADDING_RIGHT)) {
+			paddingRight = getArguments().getInt(PARAM_PADDING_RIGHT);
+		}
+		mLogViewLayout.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 	}
 
 	public void fillLogList() {
@@ -115,9 +145,9 @@ public class LogFragment extends ServDroidBaseFragment {
 			for (int i = 0; i < size; i++)
 				mLogAdapter.add(locals.get(i));
 		}
-//		Cursor c = mLogHelper.fetchAllLog();
-//		int counter = c.getCount();
-//		c.close();
+		// Cursor c = mLogHelper.fetchAllLog();
+		// int counter = c.getCount();
+		// c.close();
 
 		mLogAdapter.setItems(locals);
 		mLogAdapter.notifyDataSetChanged();
@@ -183,7 +213,8 @@ public class LogFragment extends ServDroidBaseFragment {
 		if (menu == null) {
 			return;
 		}
-		SubMenu subMenuOptions = menu.addSubMenu(MENU_GROUP_ID, MENU_ID_LOG, 0, R.string.main_menu_options);
+		SubMenu subMenuOptions = menu.addSubMenu(MENU_GROUP_ID, MENU_ID_LOG, 0,
+				R.string.main_menu_options);
 
 		for (int i = 0; i < mOptions.getLogOptions().size(); i++) {
 			IMainOption option = mOptions.getLogOptions().get(i);
@@ -195,7 +226,7 @@ public class LogFragment extends ServDroidBaseFragment {
 		MenuOptions.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM
 				| MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 	}
-	
+
 	@Override
 	public void removeSpecificMenu(Menu menu) {
 		super.removeSpecificMenu(menu);

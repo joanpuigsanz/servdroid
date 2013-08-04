@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 Joan Puig Sanz
+<!--
+     Copyright (C) 2013 Joan Puig Sanz
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,46 +17,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainLinearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" >
+    android:layout_height="match_parent" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="@dimen/titles_size"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingRight="@dimen/activity_horizontal_margin" >
+        android:layout_height="match_parent" >
 
-        <fragment
-            android:id="@+id/startStopFragment"
-            android:name="org.servDroid.ui.fragment.StartStopFragment"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
 
-        <View style="@style/separator" />
+            <fragment
+                android:id="@+id/startStopFragment"
+                android:name="org.servDroid.ui.fragment.StartStopFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <fragment
-            android:id="@+id/optionsFragment"
-            android:name="org.servDroid.ui.fragment.OptionsFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-        </fragment>
-    </LinearLayout>
+            <View style="@style/horizontal_separator" />
+
+            <fragment
+                android:id="@+id/optionsFragment"
+                android:name="org.servDroid.ui.fragment.OptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </fragment>
+        </LinearLayout>
+
+        <View
+            style="@style/vertical_separator"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/fillableFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
     </FrameLayout>
-    <!--
-    <fragment
-        android:id="@+id/log_fragment"
-        android:name="org.servDroid.ui.fragment.LogFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </fragment>
-    -->
 
 </LinearLayout>

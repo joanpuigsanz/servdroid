@@ -17,6 +17,7 @@
 package org.servDroid.ui.activity;
 
 import org.servDroid.ui.fragment.LogFragment;
+import org.servDroid.ui.fragment.OptionsFragment;
 import org.servDroid.ui.fragment.ServDroidBaseFragment;
 import org.servDroid.ui.fragment.SettingsFragment;
 import org.servDroid.ui.fragment.WebFragment;
@@ -24,6 +25,7 @@ import org.servDroid.ui.option.IMainOptionsList;
 import org.servDroid.ui.option.ServDroidOptions;
 import org.servDroid.web.R;
 
+import roboguice.inject.InjectFragment;
 import roboguice.inject.InjectView;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -45,6 +47,9 @@ public class MainActivityTwoPanes extends ServDroidBaseFragmentActivity {
 
 	private ServDroidBaseFragment mCurrentSupportFragment;
 	private String mCurrentFragmentTag;
+
+	@InjectFragment(R.id.optionsFragment)
+	private OptionsFragment mOptionsFragment;
 
 	@InjectView(R.id.fillableFrameLayout)
 	private FrameLayout mFillableLayout;
@@ -86,6 +91,13 @@ public class MainActivityTwoPanes extends ServDroidBaseFragmentActivity {
 	private LogFragment getLogFragment() {
 		if (mLogFragment == null) {
 			mLogFragment = new LogFragment();
+			Bundle params = new Bundle();
+			int padding = getResources().getDimensionPixelSize(R.dimen.padding_log_view);
+			params.putInt(LogFragment.PARAM_PADDING_TOP, padding);
+			params.putInt(LogFragment.PARAM_PADDING_BOTTOM, padding);
+			params.putInt(LogFragment.PARAM_PADDING_LEFT, padding);
+			params.putInt(LogFragment.PARAM_PADDING_RIGHT, padding);
+			mLogFragment.setArguments(params);
 		}
 		return mLogFragment;
 	}

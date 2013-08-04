@@ -21,7 +21,9 @@
     <ListView
         android:id="@+id/listViewMainFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:listSelector="@drawable/list_item_selector"
+        android:choiceMode="singleChoice">
     </ListView>
 
 </LinearLayout>

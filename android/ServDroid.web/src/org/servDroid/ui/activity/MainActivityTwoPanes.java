@@ -21,6 +21,7 @@ import org.servDroid.ui.fragment.OptionsFragment;
 import org.servDroid.ui.fragment.ServDroidBaseFragment;
 import org.servDroid.ui.fragment.SettingsFragment;
 import org.servDroid.ui.fragment.WebFragment;
+import org.servDroid.ui.fragment.StartStopFragment.OnStartStopButtonPressed;
 import org.servDroid.ui.option.IMainOptionsList;
 import org.servDroid.ui.option.ServDroidOptions;
 import org.servDroid.web.R;
@@ -39,7 +40,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.google.inject.Inject;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-public class MainActivityTwoPanes extends ServDroidBaseFragmentActivity {
+public class MainActivityTwoPanes extends ServDroidBaseFragmentActivity implements OnStartStopButtonPressed{
 
 	private LogFragment mLogFragment;
 	private WebFragment mWebFragment;
@@ -191,5 +192,13 @@ public class MainActivityTwoPanes extends ServDroidBaseFragmentActivity {
 		default:
 			break;
 		}
+	}
+
+	@Override
+	public void onStartStopButtonPressed(boolean pressed) {
+		if (mCurrentSupportFragment == getLogFragment()){
+			getLogFragment().fillLogList();
+		}
+		
 	}
 }

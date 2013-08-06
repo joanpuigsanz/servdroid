@@ -63,11 +63,16 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 
 	@Inject
 	private IPreferenceHelper mPreferenceHelper;
+	
+	private OnStartStopButtonPressed mOnStartStopButtonPressed;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.start_stop_fragment, container, false);
 
+		if (getActivity() instanceof OnStartStopButtonPressed){
+			mOnStartStopButtonPressed = (OnStartStopButtonPressed) getActivity();
+		}
 		return view;
 	}
 
@@ -131,6 +136,9 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 		} catch (InterruptedException e) {
 			Logger.e("Warning starting the server", e);
 		}
+		if (mOnStartStopButtonPressed != null){
+			mOnStartStopButtonPressed.onStartStopButtonPressed(mStartStopButton.isChecked());
+		}
 	}
 
 	private void setUrlText(boolean running) {
@@ -167,6 +175,9 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 		} catch (InterruptedException e) {
 			Logger.e("Warning stoping the server", e);
 		}
+		if (mOnStartStopButtonPressed != null){
+			mOnStartStopButtonPressed.onStartStopButtonPressed(mStartStopButton.isChecked());
+		}
 	}
 
 	@Override
@@ -192,6 +203,10 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 			break;
 		}
 
+	}
+	
+	public static interface OnStartStopButtonPressed{
+		public void onStartStopButtonPressed(boolean pressed);
 	}
 
 }

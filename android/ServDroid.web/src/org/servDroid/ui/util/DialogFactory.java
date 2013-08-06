@@ -125,8 +125,8 @@ public class DialogFactory {
 					}
 				});
 		builder.setIcon(android.R.drawable.ic_dialog_info);
-		builder.create();
 		builder.setTitle(R.string.donate);
+		builder.create();
 		builder.show();
 	}
 }

@@ -16,10 +16,14 @@
 
 package org.servDroid.ui.activity;
 
+import org.servDroid.ui.fragment.LogFragment;
+import org.servDroid.ui.fragment.StartStopFragment.OnStartStopButtonPressed;
 import org.servDroid.ui.option.IMainOption;
 import org.servDroid.ui.option.MainOptionList;
 import org.servDroid.ui.option.ServDroidOptions;
 import org.servDroid.web.R;
+
+import roboguice.inject.InjectFragment;
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -30,10 +34,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class MainActivityOnePane extends ServDroidBaseFragmentActivity {
+public class MainActivityOnePane extends ServDroidBaseFragmentActivity implements OnStartStopButtonPressed {
 
 	@Inject
 	private MainOptionList mOptions;
+	
+	@InjectFragment(R.id.logFragment)
+	private LogFragment mLogFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,5 +91,10 @@ public class MainActivityOnePane extends ServDroidBaseFragmentActivity {
 	private void startGenericActivityWithFragment(Class<? extends Activity> clazz) {
 		Intent intent = new Intent(this, clazz);
 		startActivity(intent);
+	}
+
+	@Override
+	public void onStartStopButtonPressed(boolean pressed) {
+		mLogFragment.fillLogList();		
 	}
 }

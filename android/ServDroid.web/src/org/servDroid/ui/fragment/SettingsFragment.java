@@ -19,7 +19,7 @@ package org.servDroid.ui.fragment;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IStoreHelper;
 import org.servDroid.helper.PreferenceUiHelper;
-import org.servDroid.module.Platform;
+import org.servDroid.module.AppModule;
 import org.servDroid.web.R;
 
 import roboguice.RoboGuice;
@@ -43,7 +43,7 @@ public class SettingsFragment extends PreferenceFragment {
 	private IStoreHelper mStoreHelper;
 
 	@Inject
-	@Named(Platform.APP_VERSION_NAME)
+	@Named(AppModule.APP_VERSION_NAME)
 	protected String mVersion;
 
 	@Override

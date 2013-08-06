@@ -17,7 +17,7 @@
 package org.servDroid.ui.activity;
 
 import org.servDroid.helper.IPreferenceHelper;
-import org.servDroid.module.Platform;
+import org.servDroid.module.AppModule;
 import org.servDroid.ui.util.DialogFactory;
 import org.servDroid.util.FilesChecker;
 
@@ -34,11 +34,11 @@ public class StartActivity extends RoboActivity {
 	public static final String KEY_NEW_VERSION = "NEW_VERSION";
 
 	@Inject
-	@Named(Platform.HAS_TWO_PANES)
+	@Named(AppModule.HAS_TWO_PANES)
 	protected boolean hasTwoPanes;
 
 	@Inject
-	@Named(Platform.APP_VERSION_NAME)
+	@Named(AppModule.APP_VERSION_NAME)
 	private String version;
 
 	@Inject

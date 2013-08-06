@@ -24,7 +24,7 @@ import java.util.List;
 import org.servDroid.db.LogAdapter;
 import org.servDroid.db.LogMessage;
 import org.servDroid.helper.IPreferenceHelper;
-import org.servDroid.module.Platform;
+import org.servDroid.module.AppModule;
 import org.servDroid.server.HttpRequestHandler;
 import org.servDroid.server.service.params.ServerParams;
 import org.servDroid.ui.activity.StartActivity;
@@ -77,7 +77,7 @@ public class ServerService extends RoboService implements ServerValues {
 	private LogAdapter mLogAdapter;
 
 	@Inject
-	@Named(Platform.APP_VERSION_NAME)
+	@Named(AppModule.APP_VERSION_NAME)
 	private String mVersion;
 
 	@Inject

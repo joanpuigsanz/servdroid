@@ -20,7 +20,7 @@ import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.helper.IStoreHelper;
 import org.servDroid.helper.IStoreHelper.OnPurchaseInfoChangedListener;
-import org.servDroid.module.Platform;
+import org.servDroid.module.AppModule;
 import org.servDroid.server.service.ServerValues;
 import org.servDroid.ui.fragment.OptionsFragment.OnOptionClickListener;
 import org.servDroid.ui.util.DialogFactory;
@@ -59,7 +59,7 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 	protected IServiceHelper serviceHelper;
 
 	@Inject
-	@Named(Platform.HAS_TWO_PANES)
+	@Named(AppModule.HAS_TWO_PANES)
 	protected boolean hasTwoPanes;
 
 	@Override

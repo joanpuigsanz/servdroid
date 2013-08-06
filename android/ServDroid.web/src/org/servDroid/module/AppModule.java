@@ -29,7 +29,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.name.Named;
 
-public class Platform extends AbstractModule {
+public class AppModule extends AbstractModule {
 
 	public final static String APP_VERSION_NAME = "appVersionName";
 	public final static String APP_VERSION_CODE = "appVersionCode";

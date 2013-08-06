@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.servDroid.module.EmptyStoreModule;
-import org.servDroid.module.Platform;
+import org.servDroid.module.AppModule;
 import org.servDroid.module.UiModule;
 import org.servDroid.module.UtilsModule;
 
@@ -30,7 +30,7 @@ import android.app.Application;
 import com.google.inject.Module;
 import com.google.inject.Stage;
 
-public class AppController extends Application {
+public class ServDroidApplication extends Application {
 
 	/**
 	 * Get the modules that will run in the application. Override this method to
@@ -46,7 +46,7 @@ public class AppController extends Application {
 			modules.add(selectModule(EmptyStoreModule.class));
 		}
 		modules.add(RoboGuice.newDefaultRoboModule(this));
-		modules.add(selectModule(Platform.class));
+		modules.add(selectModule(AppModule.class));
 		modules.add(selectModule(UiModule.class));
 		modules.add(selectModule(UtilsModule.class));
 

@@ -17,7 +17,7 @@ The version 0.2.4 and above allows the developer to manage the ServDroid service
 If you have an application which needs to manage a web server you can use the ServDroid for this purpose.
 In this page you will learn how to connect to the ServDroid service in order to manage through using a simple helper.
 
-![Screenshot 1](https://lh5.ggpht.com/TR2aH3RpMFKZ-fOY8sBr9l6hD46SQSP-c3OGuSQNUJ6onSNcM023Cj8xq1X0nDJRtg=h900-rw) 
+![Screenshots](http://joanpuigsanz.github.io/servdroid/images/servdroid_screens.png) 
 
 ### How to
 You can find a simple example in the ServDroid repository

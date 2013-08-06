@@ -61,11 +61,10 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 	@Inject
 	@Named(AppModule.HAS_TWO_PANES)
 	protected boolean hasTwoPanes;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		Bundle extras = getIntent().getExtras();
 		if (extras != null && extras.getBoolean(StartActivity.KEY_NEW_VERSION)) {
 			DialogFactory.ShowDonateDialog(this, storeHelper);

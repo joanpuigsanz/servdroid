@@ -56,7 +56,7 @@ public class StartActivity extends RoboActivity {
 
 		String previousVersion = mPreferences.getPreviousVersion();
 		// new version?
-		if (previousVersion == null || previousVersion.length() < 4) {
+		if (previousVersion == null || previousVersion.length() < 4 || !version.equals(previousVersion)) {
 			FilesChecker.checkLogPath(mPreferences.getLogPath(), null);
 			FilesChecker.checkWwwPath(mPreferences.getWwwPath(), null);
 			FilesChecker.checkErrorPath(mPreferences.getErrorPath(), null);
@@ -65,12 +65,9 @@ public class StartActivity extends RoboActivity {
 			// Do update process if needed
 		}
 
-		DialogFactory.showAboutDialog(this, previousVersion, null);
-
 		mPreferences.setPreviousVersion(version);
 
 		startActivity(intent);
-
 	}
 
 }

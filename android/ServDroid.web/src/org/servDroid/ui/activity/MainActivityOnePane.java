@@ -38,7 +38,7 @@ public class MainActivityOnePane extends ServDroidBaseFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_layout);
+		setContentView(R.layout.main_onepane);
 	}
 
 	@Override

@@ -60,7 +60,7 @@ public class MainActivityTwoPanes extends ServDroidBaseFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_layout);
+		setContentView(R.layout.main_twopanes);
 
 		if (mCurrentFragmentTag == null & mCurrentSupportFragment == null) {
 			setRightSuportFragment(getLogFragment());

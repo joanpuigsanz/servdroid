@@ -21,13 +21,17 @@ import org.servDroid.helper.IServiceHelper;
 import org.servDroid.web.R;
 
 import roboguice.inject.InjectView;
-
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.inject.Inject;
 
@@ -35,38 +39,73 @@ public class WebFragment extends ServDroidBaseFragment {
 
 	@Inject
 	IPreferenceHelper preferenceHelper;
-	
+
 	@InjectView(R.id.webView)
-	WebView mWebView;
-	
+	private WebView mWebView;
+
+	@InjectView(R.id.urlText)
+	private EditText mUrlTextView;
+
 	@Inject
 	protected IServiceHelper serviceHelper;
-	
+
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.web_fragment, container, false);
 		return view;
 	}
-	
+
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
-		mWebView.setWebViewClient(new WebViewClient() {
-	        @Override
-	        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-	        	//TODO: if open external URL open link in the external browser
-	            view.loadUrl(url);
-	            return false;
-	        }
-	    });
+		mWebView.setWebViewClient(new ServDroidWebViewClient());
+
+		mUrlTextView.setOnKeyListener(new OnKeyListener() {
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				// If the event is a key-down event on the "enter" button
+				if ((event.getAction() == KeyEvent.ACTION_DOWN)
+						&& (keyCode == KeyEvent.KEYCODE_ENTER)) {
+					mWebView.loadUrl(mUrlTextView.getText().toString());
+					return true;
+				}
+				return false;
+			}
+		});
+		
+		mUrlTextView.setOnFocusChangeListener(new OnFocusChangeListener() {
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus){
+					mUrlTextView.setSelection(mUrlTextView.getText().length());
+				}
+			}
+		});
 	}
-	
+
 	@Override
 	public void onResume() {
 		mWebView.clearCache(true);
 		mWebView.loadUrl("http://localhost:" + preferenceHelper.getPort());
+		mWebView.requestFocus();
 		super.onResume();
+	}
+
+	private class ServDroidWebViewClient extends WebViewClient {
+		@Override
+		public boolean shouldOverrideUrlLoading(WebView view, String url) {
+			// TODO: if open external URL open link in the external browser
+			view.loadUrl(url);
+			return false;
+		}
+
+		@Override
+		public void onPageFinished(WebView view, String url) {
+			super.onPageFinished(view, url);
+			mUrlTextView.setText(url);
+			if (mUrlTextView.hasFocus()){
+				mUrlTextView.setSelection(mUrlTextView.getText().length());
+			}
+		}
 	}
 
 }

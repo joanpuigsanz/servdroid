@@ -28,10 +28,12 @@ import android.view.View;
 import android.view.View.OnFocusChangeListener;
 import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 import com.google.inject.Inject;
 
@@ -70,6 +72,16 @@ public class WebFragment extends ServDroidBaseFragment {
 				}
 				return false;
 			}
+		});
+		
+		mUrlTextView.setOnEditorActionListener(new OnEditorActionListener() {        
+		    @Override
+		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+		        if(actionId==EditorInfo.IME_ACTION_DONE){
+		        	mWebView.loadUrl(mUrlTextView.getText().toString());
+		        }
+		    return false;
+		    }
 		});
 		
 		mUrlTextView.setOnFocusChangeListener(new OnFocusChangeListener() {

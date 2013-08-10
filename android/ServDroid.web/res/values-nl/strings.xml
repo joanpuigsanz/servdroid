@@ -127,7 +127,7 @@
 	<string name="log_entries">Hoeveel registers worden getoond</string>
 
 
-	<string name="title_other_settings">Andere voorkeuren</string>
+	<string name="title_other">Andere</string>
 
 	<string name="reset_configurations">Herstel voorkeuren</string>
 	<string name="other_reset">Herstel configuraties</string>
@@ -209,7 +209,7 @@
 		\n\nMeer informatie op %1$s
 		\n\nBedankt:
 		voor vertalen: Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
-		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Alfred Ferrer en Enric Puig.
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Alfred Ferrer, Enric Puig, Matthias Geurts en Ester Angulo.
 		\n\nOverweeg alstublieft om een donatie over te maken.</string>
   <string name="donate_info">
       Omdat dit project een open source project is, worden er geen inkomsten/winst gegenereerd om nieuwe features te intregreren of bugs te fixen.\n\n
@@ -238,5 +238,8 @@
 	<string name="loading">Laden&#8230;</string>
 	<string name="error_connecting_service">Fout, kan geen verbinding maken met de server</string>
   
+	<!-- 1.0.2 -->
+    <string name="more_apps">Meer applicaties</string>
+    
 </resources>
 

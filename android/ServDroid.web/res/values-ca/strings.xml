@@ -99,7 +99,7 @@
     <string name="title_log_settings">Preferències dels registres</string>
     <string name="show_entries">Entrades a mostrar</string>
     <string name="log_entries">Quantes entrades del registre seran mostrades</string>
-    <string name="title_other_settings">Altres preferències</string>
+    <string name="title_other">Altres</string>
     <string name="reset_configurations">Reiniciar preferències</string>
     <string name="other_reset">Restablir les configuracions</string>
     <string name="reset_configurations_message">Aquesta opció restablirà les configuracions per
@@ -157,7 +157,7 @@
 	\n\nMés informació a %1$s
 	\n\nServDroid.Web ha estat programat per Joan Puig Sanz.
 	\n\nEspecial agraïment per les traduccions a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
-		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer i Enric Puig.</string>
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer, Enric Puig, Matthias Geurts i Ester Angulo.</string>
     <string name="donate_info">      Donat que aquest projecte és de codi obert, no té ingressos per vendes que li ajudin a millorar.\n\n
      Si t\'ha agradat ServDroid.web, estaria bé fer una donació per donar soport.\n\n Moltes gracies!</string>
     <string name="thanks_you">Moltes gracies!</string>
@@ -176,12 +176,15 @@
     <!-- Share text -->
     <string name="share_subject_server">Fes un cop d\'ull al meu servidor web a la plataforma Android</string>
     <string name="share_subject_servdroid">Fes un cop d\'ull a ServDroid</string>
-    <string name="share_text_server">Aquí el link al meu servidor Android gracies a ServDroid: </string>
+    <string name="share_text_server">Aquí el link al meu servidor Android gràcies a ServDroid: </string>
     <string name="share_text_servdroid">Estic utilitzant ServDroid per còrrer un servidor web al meu dispositiu Android. Aquí el link: %1$s</string>
     <string name="share_title_link">Comparteix la direcció del servidor</string>
     <string name="share_title_servdroid">Comparteix ServDroid</string>
     <string name="server_url">URL del servidor:</string>
     <string name="loading">Carregant&#8230;</string>
     <string name="error_connecting_service">ERROR connectant amb el servidor</string>
+    
+    <!-- 1.0.2 -->
+    <string name="more_apps">Més aplicacions</string>
 
 </resources>

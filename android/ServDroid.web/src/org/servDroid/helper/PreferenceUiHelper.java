@@ -59,6 +59,7 @@ public class PreferenceUiHelper {
 	private Preference mPreferenceAbout;
 	private Preference mPreferenceFileIndexingGetTemplate;
 	private Preference mPreferenceReleaseNotes;
+	private Preference mPreferenceMoreApps;
 
 	private PreferenceGroup mPrefGroup;
 	private Context mContext;
@@ -107,6 +108,7 @@ public class PreferenceUiHelper {
 		mPreferenceAbout = (Preference) getPreference(R.string.pref_about_key);
 		mPreferenceFileIndexingGetTemplate = (Preference) getPreference(R.string.pref_directory_indexing_get_template_key);
 		mPreferenceReleaseNotes = (Preference) getPreference(R.string.pref_release_notes_key);
+		mPreferenceMoreApps = (Preference) getPreference(R.string.pref_more_apps_key);
 
 	}
 
@@ -205,6 +207,22 @@ public class PreferenceUiHelper {
 
 				showReleaseNotesDialog();
 
+				return true;
+			}
+		});
+
+		mPreferenceMoreApps.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+			public boolean onPreferenceClick(Preference preference) {
+
+				String developerId = "BeyondAR";
+				try {
+					mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri
+							.parse("market://developer?id=" + developerId)));
+				} catch (android.content.ActivityNotFoundException anfe) {
+					mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri
+							.parse("http://play.google.com/store/apps/developer?id=" + developerId)));
+				}
 				return true;
 			}
 		});

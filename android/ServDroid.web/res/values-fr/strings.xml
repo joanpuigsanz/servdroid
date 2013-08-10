@@ -129,7 +129,7 @@
 	</string>
 
 
-	<string name="title_other_settings">Autres préférences</string>
+	<string name="title_other">Autres</string>
 
 	<string name="reset_configurations">Réinitialiser les favoris</string>
 	<string name="other_reset">Rétablir les configurations </string>
@@ -204,7 +204,8 @@
         ServDroid.web a été développé par Joan Puig Sanz.
         \n\nInformations complémentaires au %1$s
         \n\nNos remerciements à Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck,
-        Francesca Fontana, Pierre Ducoudray, Tatiana Marechale, Alfred Ferrer et Enric Puig pour la traduction.
+        Francesca Fontana, Pierre Ducoudray, Tatiana Marechale, Alfred Ferrer, Enric Puig, Matthias Geurts et 
+        Ester Angulo pour la traduction.
         \n\nPensez à faire une donation
 </string>
   <string name="donate_info">

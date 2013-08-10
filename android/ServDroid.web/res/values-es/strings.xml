@@ -101,7 +101,7 @@
     <string name="title_log_settings">Preferencias de los registros</string>
     <string name="show_entries">Entradas a mostrar</string>
     <string name="log_entries">Cuantas entradas del registro serán mostradas</string>
-    <string name="title_other_settings">Otras preferencias</string>
+    <string name="title_other">Otras</string>
     <string name="reset_configurations">Reiniciar preferencias</string>
     <string name="other_reset">Reestablecer las configuraciones</string>
     <string name="reset_configurations_message">Esta opción reestablecera las configuraciones por
@@ -160,7 +160,7 @@
 	\n\nMás información en %1$s
 	\n\nServDroid.Web ha sido programado por Joan Puig Sanz.
 	\n\nEspecial agradecimiento por las traducciones a Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
-		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer y Enric Puig.</string>
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer, Enric Puig, Matthias Geurts y Ester Angulo.</string>
     <string name="donate_info">      Como este es un proyecto de código abierto, no tiene ingresos por ventas para poder ser mejorado.\n\n
      Si te ha gustado ServDroid.web, estaría bien hacer una donación para dar soporte.\n\n Muchas gracias!</string>
     <string name="thanks_you">Muchas gracias!</string>
@@ -185,6 +185,9 @@
     <string name="share_title_servdroid">Comparte ServDroid</string>
     <string name="server_url">URL del servidor:</string>
     <string name="loading">Cargando&#8230;</string>
-    <string name="error_connecting_service">ERROR conectandose con el servidor</string>
+    <string name="error_connecting_service">ERROR conectándose con el servidor</string>
+    
+    <!-- 1.0.2 -->
+    <string name="more_apps">Más aplicaciones</string>
 
 </resources>

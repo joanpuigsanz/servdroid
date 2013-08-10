@@ -103,6 +103,7 @@
                 android:summary="@string/server_directory_indexing_get_template"
                 android:title="@string/directory_indexing_get_template" />
         </PreferenceCategory>
+    
     <PreferenceCategory android:title="@string/title_log_settings" >
         <ListPreference
             android:defaultValue="@integer/default_log_entries"
@@ -112,14 +113,9 @@
             android:summary="@string/log_entries"
             android:title="@string/show_entries" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/title_other_settings" >
-        <!-- <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="@string/pref_show_ads_key"
-            android:summary="@string/settings_show_ads_text"
-            android:title="@string/settings_show_ads" /> -->
-
-        <Preference
+   
+    <PreferenceCategory android:title="@string/title_other" >
+		<Preference
             android:key="@string/pref_reset_config_key"
             android:summary="@string/other_reset"
             android:title="@string/reset_configurations" />
@@ -130,6 +126,9 @@
         <Preference
             android:key="@string/pref_release_notes_key"
             android:title="@string/release_notes" />
+        <Preference
+            android:key="@string/pref_more_apps_key"
+            android:title="@string/more_apps" />
     </PreferenceCategory>
 
 </PreferenceScreen>

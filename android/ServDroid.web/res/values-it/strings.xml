@@ -101,7 +101,7 @@
     <string name="title_log_settings">Preferenze dei record</string>
     <string name="show_entries">Input da mostrare</string>
     <string name="log_entries">Quanti input dei record saranno mostrati</string>
-    <string name="title_other_settings">Altre preferenze</string>
+    <string name="title_other">Altre</string>
     <string name="reset_configurations">Reiniziare le preferenze</string>
     <string name="other_reset">Ristabilire le configurazioni</string>
     <string name="reset_configurations_message">Questa opzione ristabilirà le configurazioni di
@@ -152,7 +152,7 @@
        \n\nPer maggiori informazioni visita il sito %1$s
         \n\nRingraziamenti Speciali
        per le traduzioni: Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck,
-       Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer e Enric Puig.
+       Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer, Enric Puig, Matthias Geurts e Ester Angulo.
        \n\nRicorda che puoi manifestare il tuo apprezzamento e/o supporto attraverso una donazione.</string>
     <string name="donate_info">Essendo un progetto Open Source, non abbiamo alcun introito che ci sostenga nel migliorarlo.
       \n\n Se ServDroid.Web ti piace, sarebbe fantastico se potessi aiutarci nel portare avanti il progretto attraverso una donazione.

@@ -22,6 +22,8 @@
    <string name="pref_error_path_key">key_error_path</string>
    <string name="pref_vibrate_key">key_vibrate</string>
    <string name="pref_reset_config_key">key_reset_config</string>
+   <string name="pref_more_apps_key">key_more_apps</string>
+   
    <string name="pref_about_key">key_about</string>
    <string name="pref_directory_indexing_key">key_file_indexing</string>
    <string name="pref_directory_indexing_get_template_key">key_file_indexing_get_template</string>

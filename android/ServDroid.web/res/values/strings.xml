@@ -17,6 +17,7 @@
 
     <string name="app_name">ServDroid</string>
     <string name="release_notes_info" >Changes:\n\n
+        -1.0.2 Improve the "brownse localhost" section\n
         -1.0.1 Improve tablet UI and bug fixing\n
        	-1.0.0 New design and tablet support\n
 	    -0.2.5 Bug fixing\n
@@ -122,7 +123,7 @@
     <string name="title_log_settings">Log settings</string>
     <string name="show_entries">Entries to show</string>
     <string name="log_entries">How many entries are to be displayed</string>
-    <string name="title_other_settings">Other settings</string>
+    <string name="title_other">Other</string>
     <string name="reset_configurations">Reset settings</string>
     <string name="other_reset">Return to default settings</string>
     <string name="reset_configurations_message">This option will reset the ServDroid.web to its default settings. Are you sure?</string>
@@ -176,7 +177,7 @@
 		\n\nMore information at %1$s
 		\n\nEspecial thanks
 		for translations to Steve Watts, Kim Del Rio, Asgeir Oskarsson, Enrico Orsini, Jan Dunkerbeck, 
-		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer and Enric Puig.
+		Francesca Fontana, Pierre Ducoudray, Marc Abbink, Tatiana Marechale, Alfred Ferrer and Enric Puig, Matthias Geurts and Ester Angulo
 		\n\nPlease consider making a donation.</string>
     <string name="donate_info">As this project is open source, it does not generate any revenue or profit with which to fund improvements.\n\n
       If you like ServDroid.Web, it would be nice if you could support the project with a donation.\n\n
@@ -204,6 +205,9 @@
     <string name="server_url">Server URL:</string>
     <string name="loading">Loading&#8230;</string>
     <string name="error_connecting_service">ERROR connecting with the server</string>
+    
+     <!-- 1.0.2 -->
+    <string name="more_apps">More apps</string>
     
 
 </resources>

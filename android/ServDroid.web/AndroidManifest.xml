@@ -15,10 +15,10 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.servDroid.web"
-    android:versionCode="01000100"
-    android:versionName="1.0.1" >
+    android:versionCode="01000200"
+    android:versionName="1.0.2" >
 
-    <!-- 01000100 1.0.1 -->
+    <!-- 01000200 1.0.2 -->
 
     <uses-sdk
         android:minSdkVersion="8"

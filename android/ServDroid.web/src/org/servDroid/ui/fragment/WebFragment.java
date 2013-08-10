@@ -18,6 +18,7 @@ package org.servDroid.ui.fragment;
 
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
+import org.servDroid.server.service.ServerService;
 import org.servDroid.ui.activity.ServDroidBaseFragmentActivity;
 import org.servDroid.ui.activity.ServDroidBaseFragmentActivity.OnActivityKeyUp;
 import org.servDroid.web.R;
@@ -96,7 +97,11 @@ public class WebFragment extends ServDroidBaseFragment implements OnActivityKeyU
 			}
 		});
 		mWebView.clearCache(true);
-		mWebView.loadUrl("http://localhost:" + preferenceHelper.getPort());
+		int port = preferenceHelper.getPort();
+		if (preferenceHelper.getPort() < 1024){
+			port = ServerService.DEFAULT_PORT_ON_ROOT;
+		}
+		mWebView.loadUrl("http://localhost:" + port);
 		mWebView.requestFocus();
 	}
 

@@ -16,6 +16,7 @@
 
 package org.servDroid.ui.activity;
 
+import org.servDroid.db.ServdroidDbAdapter;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.helper.IStoreHelper;
@@ -33,6 +34,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.view.KeyEvent;
+import android.view.View.OnKeyListener;
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -61,7 +63,9 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 	@Inject
 	@Named(AppModule.HAS_TWO_PANES)
 	protected boolean hasTwoPanes;
-	
+
+	private OnActivityKeyUp mOnKeyListener;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -77,6 +81,10 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 		createMenuShare(appMenu);
 		createMainMenus(appMenu);
 		return true;
+	}
+
+	public void setOnKeyListener(OnActivityKeyUp onActivityKeyUp) {
+		mOnKeyListener = onActivityKeyUp;
 	}
 
 	@Override
@@ -159,6 +167,11 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 	}
 
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		if (mOnKeyListener != null) {
+			if (mOnKeyListener.OnKeyUp(this, keyCode, event)) {
+				return true;
+			}
+		}
 		if (keyCode == KeyEvent.KEYCODE_MENU) {
 			appMenu.performIdentifierAction(0, 1);
 			return true;
@@ -175,6 +188,10 @@ public class ServDroidBaseFragmentActivity extends RoboSherlockFragmentActivity 
 		if (!storeHelper.hasStoreInfo()) {
 			return;
 		}
+	}
+
+	public static interface OnActivityKeyUp {
+		public boolean OnKeyUp(ServDroidBaseFragmentActivity activity, int keyCode, KeyEvent event);
 	}
 
 }

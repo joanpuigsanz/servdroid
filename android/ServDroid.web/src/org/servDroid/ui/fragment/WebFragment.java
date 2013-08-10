@@ -18,9 +18,12 @@ package org.servDroid.ui.fragment;
 
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
+import org.servDroid.ui.activity.ServDroidBaseFragmentActivity;
+import org.servDroid.ui.activity.ServDroidBaseFragmentActivity.OnActivityKeyUp;
 import org.servDroid.web.R;
 
 import roboguice.inject.InjectView;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -37,7 +40,7 @@ import android.widget.TextView.OnEditorActionListener;
 
 import com.google.inject.Inject;
 
-public class WebFragment extends ServDroidBaseFragment {
+public class WebFragment extends ServDroidBaseFragment implements OnActivityKeyUp {
 
 	@Inject
 	IPreferenceHelper preferenceHelper;
@@ -73,33 +76,46 @@ public class WebFragment extends ServDroidBaseFragment {
 				return false;
 			}
 		});
-		
-		mUrlTextView.setOnEditorActionListener(new OnEditorActionListener() {        
-		    @Override
-		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-		        if(actionId==EditorInfo.IME_ACTION_DONE){
-		        	mWebView.loadUrl(mUrlTextView.getText().toString());
-		        }
-		    return false;
-		    }
+
+		mUrlTextView.setOnEditorActionListener(new OnEditorActionListener() {
+			@Override
+			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+				if (actionId == EditorInfo.IME_ACTION_DONE) {
+					mWebView.loadUrl(mUrlTextView.getText().toString());
+				}
+				return false;
+			}
 		});
-		
+
 		mUrlTextView.setOnFocusChangeListener(new OnFocusChangeListener() {
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-				if (hasFocus){
+				if (hasFocus) {
 					mUrlTextView.setSelection(mUrlTextView.getText().length());
 				}
 			}
 		});
+		mWebView.clearCache(true);
+		mWebView.loadUrl("http://localhost:" + preferenceHelper.getPort());
+		mWebView.requestFocus();
 	}
 
 	@Override
 	public void onResume() {
-		mWebView.clearCache(true);
-		mWebView.loadUrl("http://localhost:" + preferenceHelper.getPort());
-		mWebView.requestFocus();
 		super.onResume();
+		Activity activity = getActivity();
+		if (activity instanceof ServDroidBaseFragmentActivity) {
+			((ServDroidBaseFragmentActivity) activity).setOnKeyListener(this);
+		}
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		Activity activity = getActivity();
+		if (activity instanceof ServDroidBaseFragmentActivity) {
+			((ServDroidBaseFragmentActivity) activity).setOnKeyListener(null);
+		}
 	}
 
 	private class ServDroidWebViewClient extends WebViewClient {
@@ -114,10 +130,24 @@ public class WebFragment extends ServDroidBaseFragment {
 		public void onPageFinished(WebView view, String url) {
 			super.onPageFinished(view, url);
 			mUrlTextView.setText(url);
-			if (mUrlTextView.hasFocus()){
+			if (mUrlTextView.hasFocus()) {
 				mUrlTextView.setSelection(mUrlTextView.getText().length());
 			}
 		}
+	}
+
+	@Override
+	public boolean OnKeyUp(ServDroidBaseFragmentActivity activity, int keyCode, KeyEvent event) {
+		if (event.getAction() == KeyEvent.ACTION_UP) {
+			switch (keyCode) {
+			case KeyEvent.KEYCODE_BACK:
+				if (mWebView.canGoBack() == true) {
+					mWebView.goBack();
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 }

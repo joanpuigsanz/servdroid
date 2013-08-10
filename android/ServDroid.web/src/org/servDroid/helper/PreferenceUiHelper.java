@@ -369,9 +369,11 @@ public class PreferenceUiHelper {
 			} catch (MalformedURLException e) {
 				Logger.e(e.getMessage());
 				publishProgress(0, ERROR_DOWNLOADING);
+				return null;
 			} catch (IOException e) {
 				Logger.e(e.getMessage());
 				publishProgress(0, ERROR_DOWNLOADING);
+				return null;
 			}
 
 			publishProgress(0, DOWNLOADING_FINISHED);
@@ -381,6 +383,7 @@ public class PreferenceUiHelper {
 					+ "/servdroid-file-indexing-template.zip"),
 					new File(mPreferenceHelper.getWwwPath()))) {
 				publishProgress(0, ERROR_DOWNLOADING);
+				return null;
 			}
 
 			publishProgress(0, TASK_FINISHED);

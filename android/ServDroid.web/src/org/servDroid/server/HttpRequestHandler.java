@@ -80,6 +80,7 @@ public class HttpRequestHandler implements Runnable {
 		mimeTypes.put("jpg", "image/jpeg");
 		mimeTypes.put("gif", "image/gif");
 		mimeTypes.put("png", "image/png");
+		mimeTypes.put("svg", "image/svg+xml");
 	}
 
 	/**

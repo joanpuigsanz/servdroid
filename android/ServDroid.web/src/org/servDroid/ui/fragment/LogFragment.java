@@ -136,6 +136,9 @@ public class LogFragment extends ServDroidBaseFragment {
 	}
 
 	public void fillLogList() {
+		if (mPreferenceHelper == null){
+			return;
+		}
 		int entriesToshow = mPreferenceHelper.getMaxLogEntries();
 		List<LogMessage> locals = mLogHelper.fetchLogList(entriesToshow);
 

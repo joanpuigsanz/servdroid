@@ -19,7 +19,6 @@ package org.servDroid.helper;
 import org.servDroid.server.service.params.ServerParams;
 import org.servDroid.web.R;
 
-import roboguice.inject.ContextSingleton;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Environment;
@@ -27,7 +26,6 @@ import android.preference.PreferenceManager;
 
 import com.google.inject.Inject;
 
-@ContextSingleton
 public class PreferenceHelper implements IPreferenceHelper {
 
 	private Context mContext;

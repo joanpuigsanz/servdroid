@@ -23,8 +23,7 @@ import java.util.List;
 import java.util.Locale;
 
 import com.google.inject.Inject;
-
-import roboguice.inject.ContextSingleton;
+import com.google.inject.Singleton;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -35,7 +34,7 @@ import android.database.Cursor;
  * @author Joan Puig Sanz
  * 
  */
-@ContextSingleton
+@Singleton
 public class LogAdapter extends ServdroidDbAdapter {
 
 	@Inject

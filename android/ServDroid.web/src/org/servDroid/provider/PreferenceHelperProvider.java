@@ -10,7 +10,7 @@ import com.google.inject.Provider;
 
 public class PreferenceHelperProvider implements Provider<IPreferenceHelper> {
 
-	@Inject Context context;
+	private @Inject Context context;
 	
 	@Override
 	public IPreferenceHelper get() {

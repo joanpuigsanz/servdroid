@@ -35,10 +35,10 @@ import android.database.Cursor;
  * 
  */
 @Singleton
-public class LogAdapter extends ServdroidDbAdapter {
+public class LogHelper extends ServdroidDbHelper {
 
 	@Inject
-	public LogAdapter(Context ctx) {
+	public LogHelper(Context ctx) {
 		super(ctx);
 		if (mDbHelper == null | mDb == null) {
 			open();

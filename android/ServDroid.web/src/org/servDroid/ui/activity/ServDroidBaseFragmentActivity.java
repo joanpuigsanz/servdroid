@@ -16,7 +16,7 @@
 
 package org.servDroid.ui.activity;
 
-import org.servDroid.db.ServdroidDbAdapter;
+import org.servDroid.db.ServdroidDbHelper;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.helper.IStoreHelper;

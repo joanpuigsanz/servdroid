@@ -16,7 +16,7 @@
 
 package org.servDroid.ui.fragment;
 
-import org.servDroid.db.LogAdapter;
+import org.servDroid.db.LogHelper;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.helper.IServiceHelper.ServerStatusListener;
@@ -54,7 +54,7 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 	private TextView mTextViewUrl;
 
 	@Inject
-	private LogAdapter mLogAdapter;
+	private LogHelper mLogAdapter;
 
 	@Inject
 	private Context mContex;

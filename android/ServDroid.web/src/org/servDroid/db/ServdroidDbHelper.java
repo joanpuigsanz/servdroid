@@ -30,7 +30,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * @author Joan Puig Sanz
  * 
  */
-public class ServdroidDbAdapter {
+public class ServdroidDbHelper {
 
 	public static final String KEY_ROWID = "_id";
 	public static final String KEY_HOSTS = "host";
@@ -85,7 +85,7 @@ public class ServdroidDbAdapter {
 	 * @param ctx
 	 *            the Context within which to work
 	 */
-	public ServdroidDbAdapter(Context ctx) {
+	public ServdroidDbHelper(Context ctx) {
 		this.mCtx = ctx;
 	}
 
@@ -99,7 +99,7 @@ public class ServdroidDbAdapter {
 	 * @throws SQLException
 	 *             if the database could not be opened or created
 	 */
-	public ServdroidDbAdapter open() throws SQLException {
+	public ServdroidDbHelper open() throws SQLException {
 		mDbHelper = new DatabaseHelper(mCtx);
 		if (mDb == null) {
 			mDb = mDbHelper.getWritableDatabase();

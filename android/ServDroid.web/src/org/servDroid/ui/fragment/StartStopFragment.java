@@ -136,6 +136,9 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 			setErrorConnectingService();
 		} catch (InterruptedException e) {
 			Logger.e("Warning starting the server", e);
+		} catch (Exception e) {
+			Logger.e("Error starting the server", e);
+			setErrorConnectingService();
 		}
 		if (mOnStartStopButtonPressed != null){
 			mOnStartStopButtonPressed.onStartStopButtonPressed(mStartStopButton.isChecked());

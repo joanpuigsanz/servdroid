@@ -75,7 +75,6 @@ public class ServDroidApplication extends Application {
 	@Override
 	public void onCreate() {
 		try {
-
 			RoboGuice.setBaseApplicationInjector(this, Stage.PRODUCTION, getModules());
 		} catch (Throwable t) {
 			throw new RuntimeException("FATAL!! Could not instantiate application modules", t);

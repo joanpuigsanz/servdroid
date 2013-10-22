@@ -23,9 +23,7 @@ import org.servDroid.helper.IStoreHelper;
 import org.servDroid.web.R;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 
-@Singleton
 public class MainOptionList implements IMainOptionsList {
 
 	private List<IMainOption> mMainOptions;

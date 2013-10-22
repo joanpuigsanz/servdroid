@@ -18,16 +18,14 @@ package org.servDroid.ui.activity;
 
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.module.AppModule;
-import org.servDroid.ui.util.DialogFactory;
 import org.servDroid.util.FilesChecker;
 
 import roboguice.activity.RoboActivity;
+import android.content.Intent;
+import android.os.Bundle;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
-
-import android.content.Intent;
-import android.os.Bundle;
 
 public class StartActivity extends RoboActivity {
 

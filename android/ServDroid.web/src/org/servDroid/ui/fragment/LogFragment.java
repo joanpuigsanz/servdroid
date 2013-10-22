@@ -26,9 +26,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import org.servDroid.db.LogAdapter;
+import org.servDroid.db.LogHelper;
 import org.servDroid.db.LogMessage;
-import org.servDroid.db.ServdroidDbAdapter;
+import org.servDroid.db.ServdroidDbHelper;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.ui.adapter.LogListAdapter;
@@ -77,7 +77,7 @@ public class LogFragment extends ServDroidBaseFragment {
 	private LogListAdapter mLogAdapter;
 
 	@Inject
-	private LogAdapter mLogHelper;
+	private LogHelper mLogHelper;
 
 	@Inject
 	private Context mContext;
@@ -136,6 +136,9 @@ public class LogFragment extends ServDroidBaseFragment {
 	}
 
 	public void fillLogList() {
+		if (mPreferenceHelper == null){
+			return;
+		}
 		int entriesToshow = mPreferenceHelper.getMaxLogEntries();
 		List<LogMessage> locals = mLogHelper.fetchLogList(entriesToshow);
 
@@ -284,11 +287,11 @@ public class LogFragment extends ServDroidBaseFragment {
 			int counts = c.getCount();
 
 			c.moveToFirst();
-			int indexIp = c.getColumnIndex(ServdroidDbAdapter.KEY_HOSTS);
-			int indexPath = c.getColumnIndex(ServdroidDbAdapter.KEY_PATH);
-			int indexTimeStamp = c.getColumnIndex(ServdroidDbAdapter.KEY_TIME);
-			int indexInfoBegining = c.getColumnIndex(ServdroidDbAdapter.KEY_INFOBEGINING);
-			int indexInfoEnd = c.getColumnIndex(ServdroidDbAdapter.KEY_INFOEND);
+			int indexIp = c.getColumnIndex(ServdroidDbHelper.KEY_HOSTS);
+			int indexPath = c.getColumnIndex(ServdroidDbHelper.KEY_PATH);
+			int indexTimeStamp = c.getColumnIndex(ServdroidDbHelper.KEY_TIME);
+			int indexInfoBegining = c.getColumnIndex(ServdroidDbHelper.KEY_INFOBEGINING);
+			int indexInfoEnd = c.getColumnIndex(ServdroidDbHelper.KEY_INFOEND);
 
 			File folder = new File(path);
 			if (!folder.exists() || (folder.exists() && !folder.isDirectory())) {

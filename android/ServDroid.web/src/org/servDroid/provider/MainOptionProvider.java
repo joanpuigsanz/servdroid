@@ -13,21 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.servDroid.provider;
 
-package org.servDroid.module;
-
-import org.servDroid.db.LogHelper;
-import org.servDroid.provider.MainOptionProvider;
 import org.servDroid.ui.option.IMainOptionsList;
+import org.servDroid.ui.option.MainOptionList;
 
-import com.google.inject.AbstractModule;
+import android.content.Context;
 
-public class UiModule extends AbstractModule {
+import com.google.inject.Inject;
+import com.google.inject.Provider;
 
+public class MainOptionProvider implements Provider<IMainOptionsList> {
+
+	private @Inject Context context;
+	
 	@Override
-	protected void configure() {
-		bind(IMainOptionsList.class).toProvider(MainOptionProvider.class);
-		bind(LogHelper.class);
+	public IMainOptionsList get() {
+		return new MainOptionList();
 	}
 
 }

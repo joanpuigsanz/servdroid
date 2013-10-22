@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
-import org.servDroid.db.LogAdapter;
+import org.servDroid.db.LogHelper;
 import org.servDroid.server.service.params.ServerParams;
 import org.servDroid.util.Logger;
 
@@ -62,7 +62,7 @@ public class HttpRequestHandler implements Runnable {
 	private BufferedReader mBr;
 
 	private ServerParams mServerParams;
-	private LogAdapter mLogAdapter;
+	private LogHelper mLogAdapter;
 
 	// SimpleDateFormat is not threadsafe, so we need an instance per thread
 	private DateFormat mHttpDate = new SimpleDateFormat(HTTP_DATE_FORMAT, Locale.US);
@@ -80,6 +80,7 @@ public class HttpRequestHandler implements Runnable {
 		mimeTypes.put("jpg", "image/jpeg");
 		mimeTypes.put("gif", "image/gif");
 		mimeTypes.put("png", "image/png");
+		mimeTypes.put("svg", "image/svg+xml");
 	}
 
 	/**
@@ -92,7 +93,7 @@ public class HttpRequestHandler implements Runnable {
 	 *            generated files (like file indexing)
 	 * @throws Exception
 	 */
-	public HttpRequestHandler(Socket socket, LogAdapter logAdapter, ServerParams serverParams,
+	public HttpRequestHandler(Socket socket, LogHelper logAdapter, ServerParams serverParams,
 			String serverVersion) throws Exception {
 		mServerParams = serverParams;
 		mLogAdapter = logAdapter;

@@ -23,8 +23,7 @@ import java.util.List;
 import java.util.Locale;
 
 import com.google.inject.Inject;
-
-import roboguice.inject.ContextSingleton;
+import com.google.inject.Singleton;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -35,11 +34,11 @@ import android.database.Cursor;
  * @author Joan Puig Sanz
  * 
  */
-@ContextSingleton
-public class LogAdapter extends ServdroidDbAdapter {
+@Singleton
+public class LogHelper extends ServdroidDbHelper {
 
 	@Inject
-	public LogAdapter(Context ctx) {
+	public LogHelper(Context ctx) {
 		super(ctx);
 		if (mDbHelper == null | mDb == null) {
 			open();

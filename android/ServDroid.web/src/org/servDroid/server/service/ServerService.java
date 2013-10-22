@@ -21,7 +21,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 
-import org.servDroid.db.LogAdapter;
+import org.servDroid.db.LogHelper;
 import org.servDroid.db.LogMessage;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.module.AppModule;
@@ -74,7 +74,7 @@ public class ServerService extends RoboService implements ServerValues {
 	public static final int DEFAULT_PORT_ON_ROOT = 65535 - 50;
 
 	@Inject
-	private LogAdapter mLogAdapter;
+	private LogHelper mLogAdapter;
 
 	@Inject
 	@Named(AppModule.APP_VERSION_NAME)

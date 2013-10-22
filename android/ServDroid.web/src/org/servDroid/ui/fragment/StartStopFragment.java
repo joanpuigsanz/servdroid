@@ -16,7 +16,7 @@
 
 package org.servDroid.ui.fragment;
 
-import org.servDroid.db.LogAdapter;
+import org.servDroid.db.LogHelper;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.helper.IServiceHelper.ServerStatusListener;
@@ -29,6 +29,7 @@ import org.servDroid.web.R;
 
 import roboguice.inject.InjectView;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -53,7 +54,7 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 	private TextView mTextViewUrl;
 
 	@Inject
-	private LogAdapter mLogAdapter;
+	private LogHelper mLogAdapter;
 
 	@Inject
 	private Context mContex;
@@ -135,6 +136,9 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 			setErrorConnectingService();
 		} catch (InterruptedException e) {
 			Logger.e("Warning starting the server", e);
+		} catch (Exception e) {
+			Logger.e("Error starting the server", e);
+			setErrorConnectingService();
 		}
 		if (mOnStartStopButtonPressed != null){
 			mOnStartStopButtonPressed.onStartStopButtonPressed(mStartStopButton.isChecked());
@@ -152,10 +156,14 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 				port = mPreferenceHelper.getPort();
 				Logger.e("Error getting the port in use", e);
 			}
-			mTextViewUrl.setText(getText(R.string.server_url) + " "
-					+ NetworkIp.getWifiIp(wifiManager) + ":" + port);
+			if (isAdded()){
+				mTextViewUrl.setText(getText(R.string.server_url) + " "
+						+ NetworkIp.getWifiIp(wifiManager) + ":" + port);
+			}
 		} else {
-			mTextViewUrl.setText(R.string.text_stopped);
+			if (isAdded()){
+				mTextViewUrl.setText(R.string.text_stopped);
+			}
 		}
 	}
 
@@ -188,7 +196,11 @@ public class StartStopFragment extends ServDroidBaseFragment implements OnChecke
 		switch (status) {
 		case ServiceHelper.STATUS_RUNNING:
 		case ServiceHelper.STATUS_STOPPED:
-			getActivity().runOnUiThread(new Runnable() {
+			Activity activity = getActivity();
+			if (activity == null){
+				return;
+			}
+			activity.runOnUiThread(new Runnable() {
 				@Override
 				public void run() {
 					mStartStopButton.setChecked(status == ServiceHelper.STATUS_RUNNING);

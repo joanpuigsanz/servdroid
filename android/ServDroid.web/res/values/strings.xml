@@ -17,6 +17,7 @@
 
     <string name="app_name">ServDroid</string>
     <string name="release_notes_info" >Changes:\n\n
+        -1.0.3 Bug fixing\n
         -1.0.2 Improve the "brownse localhost" section\n
         -1.0.1 Improve tablet UI and bug fixing\n
        	-1.0.0 New design and tablet support\n

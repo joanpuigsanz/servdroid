@@ -11,7 +11,11 @@ ServDroid is an small web server for the Android platform.
 * The 404 error page can be personalised.
 Available on [Google Play store](https://play.google.com/store/apps/details?id=org.servDroid.web)
 
-This project uses ActionBarSherlock. In order to be able to use it
+This project uses ActionBarSherlock. In order to be able to use it run the following commands on the root project path:
+```
+git submodule init
+git submodule update
+```
 ## Binding the ServDroid service
 The version 0.2.4 and above allows the developer to manage the ServDroid service from an other application. 
 

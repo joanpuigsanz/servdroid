@@ -16,7 +16,6 @@
 
 package org.servDroid.ui.activity;
 
-import org.servDroid.db.ServdroidDbHelper;
 import org.servDroid.helper.IPreferenceHelper;
 import org.servDroid.helper.IServiceHelper;
 import org.servDroid.helper.IStoreHelper;
@@ -34,7 +33,6 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.view.KeyEvent;
-import android.view.View.OnKeyListener;
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
